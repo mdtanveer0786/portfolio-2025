@@ -211,6 +211,7 @@
     </div>
 
     <!-- Header -->
+
     <header>
         <div
             style="max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;">
@@ -220,22 +221,22 @@
 
             <nav>
                 <ul id="nav-menu" style="display:flex;gap:30px;margin:0;padding:0;list-style:none;">
-                    <li><a href="#hero"
+                    <li><a href="#hero" class="nav-link"
                             style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;">Home</a>
                     </li>
-                    <li><a href="#about"
+                    <li><a href="#about" class="nav-link"
                             style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;">About</a>
                     </li>
-                    <li><a href="#tech-stack"
+                    <li><a href="#tech-stack" class="nav-link"
                             style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;">Skills</a>
                     </li>
-                    <li><a href="#services"
+                    <li><a href="#services" class="nav-link"
                             style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;">Services</a>
                     </li>
-                    <li><a href="#projects"
+                    <li><a href="#projects" class="nav-link"
                             style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;">Projects</a>
                     </li>
-                    <li><a href="#contact"
+                    <li><a href="#contact" class="nav-link"
                             style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;">Contact</a>
                     </li>
                 </ul>
@@ -254,6 +255,36 @@
         </div>
     </header>
 
+    <style>
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            #mobile-menu-toggle {
+                display: block !important;
+            }
+
+            #nav-menu {
+                display: none !important;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: var(--header-bg);
+                backdrop-filter: blur(10px);
+                padding: 20px;
+                box-shadow: 0 5px 15px var(--shadow-color);
+            }
+
+            #nav-menu.mobile-open {
+                display: flex !important;
+            }
+
+            .nav-link.active {
+                color: var(--accent-color) !important;
+                background: rgba(58, 134, 255, 0.1);
+            }
+        }
+    </style>
     <!-- Hero Section -->
     <section id="hero"
         style="min-height:100vh;display:flex;align-items:center;padding:100px 0 50px;background:linear-gradient(135deg,var(--bg-primary) 0%,var(--bg-tertiary) 100%);position:relative;overflow:hidden;">
@@ -998,32 +1029,28 @@
                         icon.classList.add('fa-bars');
                     });
                 });
-            }
-
-            // Show/hide mobile menu button based on screen size
-            function handleResize() {
-                const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-                const navMenu = document.getElementById('nav-menu');
-
-                if (window.innerWidth <= 768) {
-                    mobileMenuToggle.style.display = 'block';
-                    if (!navMenu.classList.contains('mobile-open')) {
-                        navMenu.style.display = 'none';
+            
+                // Show/hide mobile menu button based on screen size
+                function handleResize() {
+                    if (window.innerWidth <= 768) {
+                        mobileMenuToggle.style.display = 'block'; // ✅ Use existing variable
+                        if (!navMenu.classList.contains('mobile-open')) {
+                            navMenu.style.display = 'none'; // ✅ Use existing variable
+                        }
+                    } else {
+                        mobileMenuToggle.style.display = 'none'; // ✅ Use existing variable
+                        navMenu.style.display = 'flex'; // ✅ Use existing variable
+                        navMenu.classList.remove('mobile-open'); // ✅ Use existing variable
                     }
-                } else {
-                    mobileMenuToggle.style.display = 'none';
-                    navMenu.style.display = 'flex';
-                    navMenu.classList.remove('mobile-open');
                 }
+
+                // Initial check
+                handleResize();
+
+                // Listen for resize events
+                window.addEventListener('resize', handleResize);
             }
-
-            // Initial check
-            handleResize();
-
-            // Listen for resize events
-            window.addEventListener('resize', handleResize);
         }
-
         // Navigation
         function initNavigation() {
             const header = document.querySelector('header');
@@ -1260,7 +1287,9 @@
                 modal.style.display = 'none';
                 document.body.style.overflow = 'auto';
             }
-        }        // Contact Form
+        }
+
+        // Contact Form
         function initContactForm() {
             const contactForm = document.getElementById('contact-form');
 
@@ -1269,13 +1298,77 @@
                     e.preventDefault();
 
                     if (validateContactForm()) {
-                        // Show success message
-                        showFormMessage('Message sent successfully!', 'success');
-                        contactForm.reset();
+                        // Show loading state
+                        const submitBtn = contactForm.querySelector('button[type="submit"]');
+                        const originalText = submitBtn.textContent;
+                        submitBtn.textContent = 'Sending...';
+                        submitBtn.disabled = true;
+
+                        // Get form data
+                        const formData = {
+                            name: document.getElementById('name').value,
+                            email: document.getElementById('email').value,
+                            subject: document.getElementById('subject').value,
+                            message: document.getElementById('message').value,
+                            _replyto: document.getElementById('email').value // Important for Formspree
+                        };
+
+                        console.log('Sending form data:', formData);
+
+                        // Method 1: Try with x-www-form-urlencoded (Recommended for Formspree)
+                        const encodedData = new URLSearchParams();
+                        encodedData.append('name', formData.name);
+                        encodedData.append('email', formData.email);
+                        encodedData.append('subject', formData.subject);
+                        encodedData.append('message', formData.message);
+                        encodedData.append('_replyto', formData.email);
+
+                        fetch('https://formspree.io/f/manogejq', {
+                            method: 'POST',
+                            body: encodedData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        })
+                            .then(response => {
+                                console.log('Response status:', response.status);
+                                console.log('Response headers:', response.headers);
+
+                                if (response.ok) {
+                                    return response.json().catch(() => ({})); // Handle non-JSON responses
+                                } else {
+                                    return response.text().then(text => {
+                                        throw new Error(`HTTP ${response.status}: ${text}`);
+                                    });
+                                }
+                            })
+                            .then(data => {
+                                console.log('Success response:', data);
+                                showFormMessage('✅ Message sent successfully! I will get back to you soon.', 'success');
+                                contactForm.reset();
+                            })
+                            .catch(error => {
+                                console.error('Full error details:', error);
+
+                                // More specific error messages
+                                if (error.message.includes('Failed to fetch')) {
+                                    showFormMessage('🌐 Network error. Please check your internet connection.', 'error');
+                                } else if (error.message.includes('429')) {
+                                    showFormMessage('⚠️ Too many requests. Please try again in a few minutes.', 'error');
+                                } else {
+                                    showFormMessage('❌ Failed to send message. Please try emailing me directly at mdtanweeralam0002@gmail.com', 'error');
+                                }
+                            })
+                            .finally(() => {
+                                // Reset button state
+                                submitBtn.textContent = originalText;
+                                submitBtn.disabled = false;
+                            });
                     }
                 });
             }
 
+            // Rest of your validation functions remain the same...
             function validateContactForm() {
                 const name = document.getElementById('name');
                 const email = document.getElementById('email');
@@ -1384,13 +1477,16 @@
                 const contactForm = document.getElementById('contact-form');
                 contactForm.insertBefore(messageElement, contactForm.firstChild);
 
-                // Remove message after 5 seconds
-                setTimeout(() => {
-                    messageElement.remove();
-                }, 5000);
+                // Remove message after 5 seconds (only for success)
+                if (type === 'success') {
+                    setTimeout(() => {
+                        if (messageElement.parentNode) {
+                            messageElement.remove();
+                        }
+                    }, 5000);
+                }
             }
         }
-
         // Animations
         function initAnimations() {
             // Add animation classes to elements
