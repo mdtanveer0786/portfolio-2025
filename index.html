@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Tanveer Alam | Full Stack Developer</title>
+    <meta name="description"
+        content="Professional portfolio of Md Tanveer Alam, Full Stack Developer specializing in modern web technologies.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="./profile.jpg">
+    <!-- Essential SEO Meta Tags -->
+    <meta name="keywords"
+        content="Full Stack Developer, Web Developer, React Developer, Node.js, PHP, MongoDB, Mobile App Developer">
+    <meta name="author" content="Md Tanveer Alam">
+    <meta name="robots" content="index, follow">
+    <style>
+        /* CSS Variables for Themes */
+        :root {
+            --bg-primary: #f8f9fa;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #e9ecef;
+            --text-primary: #1a1a2e;
+            --text-secondary: #6c757d;
+            --text-tertiary: #adb5bd;
+            --accent-color: #3a86ff;
+            --header-bg: rgba(248, 249, 250, 0.95);
+            --card-bg: #ffffff;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #1a1a2e;
+            --bg-secondary: #16213e;
+            --bg-tertiary: #0f3460;
+            --text-primary: #f8f9fa;
+            --text-secondary: #adb5bd;
+            --text-tertiary: #6c757d;
+            --accent-color: #3a86ff;
+            --header-bg: rgba(26, 26, 46, 0.95);
+            --card-bg: #16213e;
+            --shadow-color: rgba(0, 0, 0, 0.3);
+        }
+
+        /* Base Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+            transition: all 0.3s ease;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--header-bg);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px var(--shadow-color);
+        }
+
+        /* Sections */
+        section {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Text Colors */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--text-primary);
+        }
+
+        p,
+        span:not(.gradient-text) {
+            color: var(--text-secondary);
+        }
+
+        /* Cards */
+        .tech-item,
+        .service-card,
+        .project-card {
+            background-color: var(--card-bg);
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        /* Navigation Links */
+        header nav a {
+            color: var(--text-primary);
+        }
+
+        /* Filter Buttons */
+        .filter-btn:not(.active) {
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+        }
+
+        /* Animations */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Hover Effects */
+        .project-card:hover .project-overlay {
+            opacity: 1 !important;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .tech-item:hover {
+            transform: translateY(-5px);
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--accent-color) !important;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            #mobile-menu-toggle {
+                display: block;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: var(--header-bg);
+                backdrop-filter: blur(10px);
+                box-shadow: 0 5px 10px var(--shadow-color);
+                padding: 20px;
+                display: none;
+            }
+
+            header nav ul.mobile-open {
+                display: flex;
+            }
+
+            #hero h1 {
+                font-size: 2.5rem;
+            }
+
+            #hero h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader"
+        style="position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg-primary);display:flex;justify-content:center;align-items:center;z-index:9999;transition:all 0.5s ease;">
+        <div style="text-align:center;">
+            <div
+                style="width:60px;height:60px;border:5px solid var(--bg-tertiary);border-top:5px solid var(--accent-color);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 20px;">
+            </div>
+            <p style="color:var(--accent-color);font-weight:600;">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div
+            style="max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;">
+            <a href="#hero" style="text-decoration:none;">
+                <div style="font-size:1.5rem;font-weight:700;color:var(--accent-color);">Md Tanveer</div>
+            </a>
+
+            <nav>
+                <ul id="nav-menu" style="display:flex;gap:30px;margin:0;padding:0;list-style:none;">
+                    <li><a href="#hero"
+                            style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;">Home</a>
+                    </li>
+                    <li><a href="#about"
+                            style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;">About</a>
+                    </li>
+                    <li><a href="#tech-stack"
+                            style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;">Skills</a>
+                    </li>
+                    <li><a href="#services"
+                            style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;">Services</a>
+                    </li>
+                    <li><a href="#projects"
+                            style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;">Projects</a>
+                    </li>
+                    <li><a href="#contact"
+                            style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div style="display:flex;align-items:center;gap:15px;">
+                <button id="theme-toggle"
+                    style="background:none;border:none;cursor:pointer;font-size:1.2rem;color:var(--accent-color);">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="mobile-menu-toggle"
+                    style="display:none;background:none;border:none;cursor:pointer;font-size:1.2rem;color:var(--accent-color);">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero"
+        style="min-height:100vh;display:flex;align-items:center;padding:100px 0 50px;background:linear-gradient(135deg,var(--bg-primary) 0%,var(--bg-tertiary) 100%);position:relative;overflow:hidden;">
+        <div
+            style="max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:40px;">
+            <div style="flex:1;min-width:300px;">
+                <h1 style="font-size:3.5rem;margin-bottom:20px;font-weight:800;line-height:1.1;">Hi, I'm <span
+                        style="background:linear-gradient(135deg,#3a86ff,#8338ec);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Md
+                        Tanveer Alam</span></h1>
+                <h2 style="font-size:2rem;margin-bottom:20px;color:var(--text-secondary);font-weight:600;">Full Stack
+                    Developer</h2>
+                <p style="font-size:1.2rem;margin-bottom:30px;color:var(--text-secondary);max-width:500px;">I am a
+                    passionate Full
+                    Stack Developer who loves building fast, modern, and scalable web applications. I enjoy solving
+                    real-world problems using clean code, intuitive UI, and efficient backend systems. My focus is on
+                    creating applications that are user-friendly, secure, and high-performance.</p>
+                <div style="display:flex;gap:15px;flex-wrap:wrap;">
+                    <a href="#projects"
+                        style="display:inline-block;padding:12px 30px;background:linear-gradient(135deg,#3a86ff,#8338ec);color:white;border-radius:8px;font-weight:600;text-align:center;cursor:pointer;transition:all 0.3s ease;border:none;font-size:1rem;text-decoration:none;">View
+                        My Work</a>
+                    <a href="#contact"
+                        style="display:inline-block;padding:12px 30px;background-color:transparent;color:var(--accent-color);border:2px solid var(--accent-color);border-radius:8px;font-weight:600;text-align:center;cursor:pointer;transition:all 0.3s ease;font-size:1rem;text-decoration:none;">Get
+                        In Touch</a>
+                </div>
+            </div>
+            <div style="flex:1;min-width:300px;position:relative;">
+                <div style="width:350px;height:350px;margin:0 auto;position:relative;">
+                    <div
+                        style="width:100%;height:100%;border-radius:50%;background:linear-gradient(135deg,#3a86ff,#8338ec);display:flex;justify-content:center;align-items:center;box-shadow:0 20px 40px rgba(58,134,255,0.3);">
+                        <div
+                            style="width:90%;height:90%;border-radius:50%;background-color:var(--bg-primary);display:flex;justify-content:center;align-items:center;overflow:hidden;">
+                            <div
+                                style="width:80%;height:80%;border-radius:50%;background-color:var(--bg-tertiary);display:flex;justify-content:center;align-items:center;overflow:hidden;">
+                                <img src="./profile.jpg" alt="Md Tanveer Alam"
+                                    style="width:100%;height:100%;object-fit:cover;">
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        style="position:absolute;top:20px;right:20px;width:50px;height:50px;background:#ff006e;border-radius:50%;display:flex;justify-content:center;align-items:center;color:white;font-size:1.5rem;animation:float 3s ease-in-out infinite;">
+                        🚀</div>
+                    <div
+                        style="position:absolute;bottom:40px;left:10px;width:40px;height:40px;background:#38b000;border-radius:50%;display:flex;justify-content:center;align-items:center;color:white;font-size:1.2rem;animation:float 3s ease-in-out infinite 0.5s;">
+                        💻</div>
+                    <div
+                        style="position:absolute;top:60px;left:30px;width:35px;height:35px;background:#ff9e00;border-radius:50%;display:flex;justify-content:center;align-items:center;color:white;font-size:1rem;animation:float 3s ease-in-out infinite 1s;">
+                        ⭐</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="padding:100px 0;background-color:var(--bg-secondary);">
+        <div style="max-width:1200px;margin:0 auto;padding:0 20px;">
+            <div style="text-align:center;margin-bottom:60px;">
+                <h2 style="font-size:2.5rem;margin-bottom:15px;font-weight:700;">About Me</h2>
+                <p style="font-size:1.2rem;color:var(--text-secondary);max-width:600px;margin:0 auto;">Get to know me
+                    better</p>
+            </div>
+            <div style="display:flex;gap:60px;align-items:center;flex-wrap:wrap;">
+                <div style="flex:1;min-width:300px;">
+                    <div style="width:100%;max-width:400px;margin:0 auto;">
+                        <div
+                            style="width:100%;border-radius:20px;overflow:hidden;box-shadow:0 20px 40px var(--shadow-color);">
+                            <!-- Replace this div with your image -->
+                            <img src="./profile.jpg" alt="Md Tanveer Alam"
+                                style="width:100%;height:400px;object-fit:cover;">
+                        </div>
+                    </div>
+                </div>
+                <div style="flex:1;min-width:300px;">
+                    <h3 style="font-size:1.8rem;margin-bottom:20px;color:var(--accent-color);">Full Stack Developer</h3>
+                    <p style="margin-bottom:30px;font-size:1.1rem;color:var(--text-secondary);">I am a passionate Full
+                        Stack Developer
+                        who loves building fast, modern, and scalable web applications. I enjoy solving real-world
+                        problems using clean code, intuitive UI, and efficient backend systems. My focus is on creating
+                        applications that are user-friendly, secure, and high-performance.
+                        With experience in Frontend, Backend, and Databases, I can handle complete end-to-end
+                        development — from designing responsive interfaces to building robust server-side logic and REST
+                        APIs.
+                    </p>
+                    <div style="margin-bottom:30px;">
+                        <div
+                            style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--bg-tertiary);">
+                            <span style="font-weight:600;">Name:</span>
+                            <span>Md Tanveer Alam</span>
+                        </div>
+                        <div
+                            style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--bg-tertiary);">
+                            <span style="font-weight:600;">Email:</span>
+                            <span>mdtanweeralam0002@gmail.com</span>
+                        </div>
+                        <div
+                            style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--bg-tertiary);">
+                            <span style="font-weight:600;">Location:</span>
+                            <span>Delhi, India</span>
+                        </div>
+                        <div
+                            style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--bg-tertiary);">
+                            <span style="font-weight:600;">Experience:</span>
+                            <span>1+ Years</span>
+                        </div>
+                    </div>
+
+                    <div style="display:flex;gap:15px;flex-wrap:wrap;">
+                        <a href="./MD_TANVEER_ALAM_RESUME.pdf" download="Md_Tanveer_Alam_Resume.pdf"
+                            style="display:inline-block;padding:12px 30px;background:linear-gradient(135deg,#3a86ff,#8338ec);color:white;border-radius:8px;font-weight:600;text-align:center;cursor:pointer;transition:all 0.3s ease;border:none;font-size:1rem;text-decoration:none;">
+                            Download Resume </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech-stack" style="padding:100px 0;background-color:var(--bg-primary);">
+        <div style="max-width:1200px;margin:0 auto;padding:0 20px;">
+            <div style="text-align:center;margin-bottom:60px;">
+                <h2 style="font-size:2.5rem;margin-bottom:15px;font-weight:700;">Technical Stack</h2>
+                <p style="font-size:1.2rem;color:var(--text-secondary);max-width:600px;margin:0 auto;">Technologies and
+                    tools I work with</p>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:40px;">
+                <div>
+                    <h3 style="font-size:1.5rem;margin-bottom:20px;color:var(--accent-color);text-align:center;">
+                        Frontend Development</h3>
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));gap:20px;">
+                        <div class="tech-item"
+                            style="padding:25px;border-radius:12px;text-align:center;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;">
+                            <div
+                                style="font-size:2.5rem;color:var(--accent-color);margin-bottom:15px;transition:all 0.3s ease;">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <span style="font-weight:600;transition:all 0.3s ease;">HTML5</span>
+                        </div>
+                        <div class="tech-item"
+                            style="padding:25px;border-radius:12px;text-align:center;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;">
+                            <div
+                                style="font-size:2.5rem;color:var(--accent-color);margin-bottom:15px;transition:all 0.3s ease;">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <span style="font-weight:600;transition:all 0.3s ease;">CSS3</span>
+                        </div>
+                        <div class="tech-item"
+                            style="padding:25px;border-radius:12px;text-align:center;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;">
+                            <div
+                                style="font-size:2.5rem;color:var(--accent-color);margin-bottom:15px;transition:all 0.3s ease;">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <span style="font-weight:600;transition:all 0.3s ease;">JavaScript</span>
+                        </div>
+                        <div class="tech-item"
+                            style="padding:25px;border-radius:12px;text-align:center;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;">
+                            <div
+                                style="font-size:2.5rem;color:var(--accent-color);margin-bottom:15px;transition:all 0.3s ease;">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <span style="font-weight:600;transition:all 0.3s ease;">React</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="font-size:1.5rem;margin-bottom:20px;color:var(--accent-color);text-align:center;">Backend
+                        Development
+                    </h3>
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));gap:20px;">
+                        <div class="tech-item"
+                            style="padding:25px;border-radius:12px;text-align:center;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;">
+                            <div
+                                style="font-size:2.5rem;color:var(--accent-color);margin-bottom:15px;transition:all 0.3s ease;">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <span style="font-weight:600;transition:all 0.3s ease;">Node.js</span>
+                        </div>
+                        <div class="tech-item"
+                            style="padding:25px;border-radius:12px;text-align:center;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;">
+                            <div
+                                style="font-size:2.5rem;color:var(--accent-color);margin-bottom:15px;transition:all 0.3s ease;">
+                                <i class="fab fa-php"></i>
+                            </div>
+                            <span style="font-weight:600;transition:all 0.3s ease;">PHP</span>
+                        </div>
+                        <div class="tech-item"
+                            style="padding:25px;border-radius:12px;text-align:center;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;">
+                            <div
+                                style="font-size:2.5rem;color:var(--accent-color);margin-bottom:15px;transition:all 0.3s ease;">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <span style="font-weight:600;transition:all 0.3s ease;">Python</span>
+                        </div>
+                        <div class="tech-item"
+                            style="padding:25px;border-radius:12px;text-align:center;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;">
+                            <div
+                                style="font-size:2.5rem;color:var(--accent-color);margin-bottom:15px;transition:all 0.3s ease;">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <span style="font-weight:600;transition:all 0.3s ease;">Express.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="font-size:1.5rem;margin-bottom:20px;color:var(--accent-color);text-align:center;">
+                        Database & Tools
+                    </h3>
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));gap:20px;">
+                        <div class="tech-item"
+                            style="padding:25px;border-radius:12px;text-align:center;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;">
+                            <div
+                                style="font-size:2.5rem;color:var(--accent-color);margin-bottom:15px;transition:all 0.3s ease;">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span style="font-weight:600;transition:all 0.3s ease;">MongoDB</span>
+                        </div>
+                        <div class="tech-item"
+                            style="padding:25px;border-radius:12px;text-align:center;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;">
+                            <div
+                                style="font-size:2.5rem;color:var(--accent-color);margin-bottom:15px;transition:all 0.3s ease;">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span style="font-weight:600;transition:all 0.3s ease;">MySQL</span>
+                        </div>
+                        <div class="tech-item"
+                            style="padding:25px;border-radius:12px;text-align:center;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;">
+                            <div
+                                style="font-size:2.5rem;color:var(--accent-color);margin-bottom:15px;transition:all 0.3s ease;">
+                                <i class="fab fa-git"></i>
+                            </div>
+                            <span style="font-weight:600;transition:all 0.3s ease;">Git</span>
+                        </div>
+                        <div class="tech-item"
+                            style="padding:25px;border-radius:12px;text-align:center;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;">
+                            <div
+                                style="font-size:2.5rem;color:var(--accent-color);margin-bottom:15px;transition:all 0.3s ease;">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <span style="font-weight:600;transition:all 0.3s ease;">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .tech-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px var(--shadow-color);
+            background: linear-gradient(135deg, var(--accent-color), #8338ec);
+        }
+
+        .tech-item:hover div,
+        .tech-item:hover span {
+            color: white !important;
+        }
+    </style>
+
+    <!-- Services Section -->
+    <section id="services" style="padding:100px 0;background-color:var(--bg-secondary);">
+        <div style="max-width:1200px;margin:0 auto;padding:0 20px;">
+            <div style="text-align:center;margin-bottom:60px;">
+                <h2 style="font-size:2.5rem;margin-bottom:15px;font-weight:700;">My Services</h2>
+                <p style="font-size:1.2rem;color:var(--text-secondary);max-width:600px;margin:0 auto;">What I can do for
+                    you</p>
+            </div>
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:30px;">
+                <div class="service-card"
+                    style="padding:40px 30px;border-radius:12px;text-align:center;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;">
+                    <div
+                        style="width:80px;height:80px;background:linear-gradient(135deg,#3a86ff,#8338ec);border-radius:50%;display:flex;justify-content:center;align-items:center;margin:0 auto 25px;color:white;font-size:2rem;transition:all 0.3s ease;">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 style="font-size:1.5rem;margin-bottom:15px;transition:all 0.3s ease;">Web Development</h3>
+                    <p style="margin-bottom:20px;color:var(--text-secondary);transition:all 0.3s ease;">Custom web
+                        applications built with modern frameworks and best practices for performance and scalability.
+                    </p>
+                    <ul style="text-align:left;color:var(--text-secondary);transition:all 0.3s ease;">
+                        <li style="margin-bottom:8px;">✅ Responsive Design</li>
+                        <li style="margin-bottom:8px;">✅ Performance Optimization</li>
+                        <li style="margin-bottom:8px;">✅ Cross-browser Compatibility</li>
+                    </ul>
+                </div>
+
+                <div class="service-card"
+                    style="padding:40px 30px;border-radius:12px;text-align:center;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;">
+                    <div
+                        style="width:80px;height:80px;background:linear-gradient(135deg,#3a86ff,#8338ec);border-radius:50%;display:flex;justify-content:center;align-items:center;margin:0 auto 25px;color:white;font-size:2rem;transition:all 0.3s ease;">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 style="font-size:1.5rem;margin-bottom:15px;transition:all 0.3s ease;">Mobile Development</h3>
+                    <p style="margin-bottom:20px;color:var(--text-secondary);transition:all 0.3s ease;">Native and
+                        cross-platform mobile applications that provide seamless user experiences.</p>
+                    <ul style="text-align:left;color:var(--text-secondary);transition:all 0.3s ease;">
+                        <li style="margin-bottom:8px;">✅ React Native</li>
+                        <li style="margin-bottom:8px;">✅ Flutter</li>
+                        <li style="margin-bottom:8px;">✅ Progressive Web Apps</li>
+                    </ul>
+                </div>
+
+                <div class="service-card"
+                    style="padding:40px 30px;border-radius:12px;text-align:center;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;">
+                    <div
+                        style="width:80px;height:80px;background:linear-gradient(135deg,#3a86ff,#8338ec);border-radius:50%;display:flex;justify-content:center;align-items:center;margin:0 auto 25px;color:white;font-size:2rem;transition:all 0.3s ease;">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 style="font-size:1.5rem;margin-bottom:15px;transition:all 0.3s ease;">UI/UX Design</h3>
+                    <p style="margin-bottom:20px;color:var(--text-secondary);transition:all 0.3s ease;">User-centered
+                        design solutions that enhance usability and create engaging digital experiences.</p>
+                    <ul style="text-align:left;color:var(--text-secondary);transition:all 0.3s ease;">
+                        <li style="margin-bottom:8px;">✅ Wireframing & Prototyping</li>
+                        <li style="margin-bottom:8px;">✅ User Research</li>
+                        <li style="margin-bottom:8px;">✅ Interaction Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px var(--shadow-color);
+            background: linear-gradient(135deg, var(--accent-color), #8338ec);
+        }
+
+        .service-card:hover h3,
+        .service-card:hover p,
+        .service-card:hover ul,
+        .service-card:hover li {
+            color: white !important;
+        }
+
+        .service-card:hover div {
+            background: white !important;
+            color: var(--accent-color) !important;
+        }
+    </style>
+
+    <!-- Projects Section -->
+    <!-- Projects Section -->
+    <section id="projects" style="padding:100px 0;background-color:var(--bg-primary);">
+        <div style="max-width:1200px;margin:0 auto;padding:0 20px;">
+            <div style="text-align:center;margin-bottom:60px;">
+                <h2 style="font-size:2.5rem;margin-bottom:15px;font-weight:700;">Featured Projects</h2>
+                <p style="font-size:1.2rem;color:var(--text-secondary);max-width:600px;margin:0 auto;">A selection of my
+                    recent work
+                </p>
+            </div>
+
+            <div style="display:flex;justify-content:center;gap:15px;margin-bottom:40px;flex-wrap:wrap;">
+                <button class="filter-btn active" data-filter="all"
+                    style="padding:10px 20px;background:linear-gradient(135deg,#3a86ff,#8338ec);color:white;border:none;border-radius:6px;cursor:pointer;font-weight:600;transition:all 0.3s ease;">All</button>
+                <button class="filter-btn" data-filter="web"
+                    style="padding:10px 20px;border:none;border-radius:6px;cursor:pointer;font-weight:600;transition:all 0.3s ease;">Web</button>
+                <button class="filter-btn" data-filter="mobile"
+                    style="padding:10px 20px;border:none;border-radius:6px;cursor:pointer;font-weight:600;transition:all 0.3s ease;">Mobile</button>
+                <button class="filter-btn" data-filter="design"
+                    style="padding:10px 20px;border:none;border-radius:6px;cursor:pointer;font-weight:600;transition:all 0.3s ease;">Design</button>
+            </div>
+
+            <div class="projects-grid"
+                style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:30px;">
+                <div class="project-card" data-category="web"
+                    style="border-radius:12px;overflow:hidden;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;">
+                    <div
+                        style="height:200px;background:url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80') center/cover;position:relative;overflow:hidden;">
+                        <div class="project-overlay"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);display:flex;justify-content:center;align-items:center;opacity:0;transition:all 0.3s ease;">
+                            <div style="display:flex;gap:15px;">
+                                <a href="https://github.com/mdtanveer0786" target="_blank" class="view-details"
+                                    data-project="1"
+                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="https://www.digifello.in/wp-content/uploads/2025/08/ecommerce-website-design.jpg"
+                                    target="_blank"
+                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding:25px;">
+                        <h3 style="font-size:1.3rem;margin-bottom:10px;">E-commerce Platform</h3>
+                        <p style="color:var(--text-secondary);">Web Development</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="mobile"
+                    style="border-radius:12px;overflow:hidden;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;">
+                    <div
+                        style="height:200px;background:url('https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80') center/cover;position:relative;overflow:hidden;">
+                        <div class="project-overlay"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);display:flex;justify-content:center;align-items:center;opacity:0;transition:all 0.3s ease;">
+                            <div style="display:flex;gap:15px;">
+                                <a href="https://github.com/mdtanveer0786" target="_blank" class="view-details"
+                                    data-project="2"
+                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                    target="_blank"
+                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding:25px;">
+                        <h3 style="font-size:1.3rem;margin-bottom:10px;">Fitness Tracking App</h3>
+                        <p style="color:var(--text-secondary);">Mobile Development</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="design"
+                    style="border-radius:12px;overflow:hidden;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;">
+                    <div
+                        style="height:200px;background:url('https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80') center/cover;position:relative;overflow:hidden;">
+                        <div class="project-overlay"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);display:flex;justify-content:center;align-items:center;opacity:0;transition:all 0.3s ease;">
+                            <div style="display:flex;gap:15px;">
+                                <a href="https://github.com/mdtanveer0786" target="_blank" class="view-details"
+                                    data-project="3"
+                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                    target="_blank"
+                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding:25px;">
+                        <h3 style="font-size:1.3rem;margin-bottom:10px;">Brand Identity Design</h3>
+                        <p style="color:var(--text-secondary);">UI/UX Design</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web"
+                    style="border-radius:12px;overflow:hidden;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;">
+                    <div
+                        style="height:200px;background:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80') center/cover;position:relative;overflow:hidden;">
+                        <div class="project-overlay"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);display:flex;justify-content:center;align-items:center;opacity:0;transition:all 0.3s ease;">
+                            <div style="display:flex;gap:15px;">
+                                <a href="https://github.com/mdtanveer0786" target="_blank" class="view-details"
+                                    data-project="4"
+                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                    target="_blank"
+                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding:25px;">
+                        <h3 style="font-size:1.3rem;margin-bottom:10px;">SaaS Dashboard</h3>
+                        <p style="color:var(--text-secondary);">Web Development</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align:center;margin-top:50px;">
+                <a href="https://github.com/mdtanveer0786" target="_blank"
+                    style="display:inline-block;padding:12px 30px;background:transparent;color:var(--accent-color);border:2px solid var(--accent-color);border-radius:8px;font-weight:600;text-align:center;cursor:pointer;transition:all 0.3s ease;font-size:1rem; text-decoration:none;">View
+                    All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="padding:100px 0;background:linear-gradient(135deg,#3a86ff,#8338ec);color:white;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 20px;">
+            <div style="text-align:center;margin-bottom:60px;">
+                <h2 style="font-size:2.5rem;margin-bottom:15px;font-weight:700;">Get In Touch</h2>
+                <p style="font-size:1.2rem;max-width:600px;margin:0 auto;opacity:0.9;color:white;">Let's work together
+                    to bring your
+                    ideas to life</p>
+            </div>
+
+            <div style="display:flex;gap:60px;flex-wrap:wrap;">
+                <div style="flex:1;min-width:300px;">
+                    <h3 style="margin-bottom:30px;font-size:1.8rem;">Contact Information</h3>
+                    <div style="display:flex;align-items:center;gap:15px;margin-bottom:25px;">
+                        <div
+                            style="width:50px;height:50px;background:rgba(130, 124, 124, 0.955);border-radius:50%;display:flex;justify-content:center;align-items:center;font-size:1.2rem;">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom:5px;">Email</h4>
+                            <a href="mailto:mdtanweeralam0002@gmail.com" style="text-decoration:none;color:inherit;">
+                                <p style="margin:0;opacity:0.9;cursor:pointer;color:white;">mdtanweeralam0002@gmail.com
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div style="display:flex;align-items:center;gap:15px;margin-bottom:25px;">
+                        <div
+                            style="width:50px;height:50px;background:rgba(110, 105, 105, 0.921);border-radius:50%;display:flex;justify-content:center;align-items:center;font-size:1.2rem;">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom:5px;">Location</h4>
+                            <p style="margin:0;opacity:0.9;color:white;">Delhi, India</p>
+                        </div>
+                    </div>
+
+                    <div style="display:flex;align-items:center;gap:15px;margin-bottom:25px;">
+                        <div
+                            style="width:50px;height:50px;background:rgba(115, 106, 106, 0.953);border-radius:50%;display:flex;justify-content:center;align-items:center;font-size:1.2rem;">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom:5px;">Phone</h4>
+                            <a href="tel:+918252574386" style="text-decoration:none;color:inherit;">
+                                <p style="margin:0;opacity:0.9;cursor:pointer;color:white;">+91 8252574386</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div style="flex:1;min-width:300px;display:flex;justify-content:center;">
+                    <form id="contact-form"
+                        style="background:white;padding:40px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.1);width:100%;max-width:500px;">
+                        <div style="margin-bottom:20px; ">
+                            <input type="text" id="name" placeholder="Your Name"
+                                style="width:100%;padding:15px;border:1px solid var(--bg-tertiary);border-radius:8px;font-size:1rem;transition:all 0.3s ease;">
+                        </div>
+                        <div style="margin-bottom:20px;">
+                            <input type="email" id="email" placeholder="Your Email"
+                                style="width:100%;padding:15px;border:1px solid var(--bg-tertiary);border-radius:8px;font-size:1rem;transition:all 0.3s ease;">
+                        </div>
+                        <div style="margin-bottom:20px;">
+                            <input type="text" id="subject" placeholder="Subject"
+                                style="width:100%;padding:15px;border:1px solid var(--bg-tertiary);border-radius:8px;font-size:1rem;transition:all 0.3s ease;">
+                        </div>
+                        <div style="margin-bottom:25px;">
+                            <textarea id="message" placeholder="Your Message" rows="5"
+                                style="width:100%;padding:15px;border:1px solid var(--bg-tertiary);border-radius:8px;font-size:1rem;transition:all 0.3s ease;resize:vertical;"></textarea>
+                        </div>
+                        <button type="submit"
+                            style="width:100%;padding:15px;background:linear-gradient(135deg,#3a86ff,#8338ec);color:white;border:none;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:all 0.3s ease;">Send
+                            Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background:#1a1a2e;color:white;padding:60px 0 30px;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 20px;">
+            <div
+                style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:30px;margin-bottom:40px;">
+                <div>
+                    <h3 style="font-size:1.8rem;margin-bottom:15px;color:#3a86ff;">Md Tanveer Alam</h3>
+                    <p style="color:#adb5bd;max-width:400px;">Full Stack Developer creating complex web applications and
+                        mobile solutions using modern technologies.</p>
+                </div>
+
+                <div>
+                    <h4 style="margin-bottom:15px;">Quick Links</h4>
+                    <ul style="list-style:none;padding:0;">
+                        <li style="margin-bottom:8px;">
+                            <a href="#hero"
+                                style="color:#adb5bd;transition:all 0.3s ease;text-decoration:none;display:flex;align-items:center;gap:8px;">
+                                <i class="fas fa-home" style="width:16px;"></i>
+                                Home
+                            </a>
+                        </li>
+                        <li style="margin-bottom:8px;">
+                            <a href="#about"
+                                style="color:#adb5bd;transition:all 0.3s ease;text-decoration:none;display:flex;align-items:center;gap:8px;">
+                                <i class="fas fa-user" style="width:16px;"></i>
+                                About
+                            </a>
+                        </li>
+                        <li style="margin-bottom:8px;">
+                            <a href="#projects"
+                                style="color:#adb5bd;transition:all 0.3s ease;text-decoration:none;display:flex;align-items:center;gap:8px;">
+                                <i class="fas fa-briefcase" style="width:16px;"></i>
+                                Projects
+                            </a>
+                        </li>
+                        <li style="margin-bottom:8px;">
+                            <a href="#contact"
+                                style="color:#adb5bd;transition:all 0.3s ease;text-decoration:none;display:flex;align-items:center;gap:8px;">
+                                <i class="fas fa-envelope" style="width:16px;"></i>
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="margin-bottom:15px;">Connect With Me</h4>
+                    <div style="display:flex;gap:15px;">
+                        <a href="https://www.linkedin.com/in/md-tanveer-alam-b7a134219/" target="_blank"
+                            style="width:40px;height:40px;background:#3a86ff;border-radius:50%;display:flex;justify-content:center;align-items:center;color:white;font-size:1.2rem; text-decoration:none; ">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/mdtanveer0786" target="_blank"
+                            style="width:40px;height:40px;background:#3a86ff;border-radius:50%;display:flex;justify-content:center;align-items:center;color:white;font-size:1.2rem; text-decoration:none; ">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://x.com/tanveertoofan01" target="_blank"
+                            style="width:40px;height:40px;background:#3a86ff;border-radius:50%;display:flex;justify-content:center;align-items:center;color:white;font-size:1.2rem; text-decoration:none; ">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="border-top:1px solid #343a40;padding-top:30px;text-align:center;color:#adb5bd;">
+                <p>&copy; 2025 Md Tanveer Alam. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal"
+        style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:2000;justify-content:center;align-items:center;padding:20px;">
+        <div style="background:white;max-width:800px;width:100%;border-radius:12px;overflow:hidden;position:relative;">
+            <span class="close-modal"
+                style="position:absolute;top:15px;right:15px;font-size:1.5rem;cursor:pointer;z-index:10;color:#6c757d;">&times;</span>
+            <div class="modal-body" style="padding:0;">
+                <!-- Project details will be loaded here via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // DOM Content Loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize all functionality
+            initPreloader();
+            initThemeSwitcher();
+            initNavigation();
+            initScrollEffects();
+            initProjectFilter();
+            initProjectModals();
+            initContactForm();
+            initAnimations();
+            initMobileMenu();
+        });
+
+        // Preloader
+        function initPreloader() {
+            const preloader = document.getElementById('preloader');
+
+            if (preloader) {
+                // Hide preloader when page is fully loaded
+                window.addEventListener('load', function () {
+                    setTimeout(function () {
+                        preloader.style.opacity = '0';
+                        preloader.style.visibility = 'hidden';
+                    }, 1000);
+                });
+
+                // Fallback: hide preloader after 3 seconds max
+                setTimeout(function () {
+                    if (preloader.style.display !== 'none') {
+                        preloader.style.opacity = '0';
+                        preloader.style.visibility = 'hidden';
+                    }
+                }, 3000);
+            }
+        }
+
+        // Theme Switcher
+        function initThemeSwitcher() {
+            const themeToggle = document.getElementById('theme-toggle');
+
+            if (!themeToggle) return;
+
+            const themeIcon = themeToggle.querySelector('i');
+
+            // Check for saved theme preference or default to light
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+
+            themeToggle.addEventListener('click', function () {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateThemeIcon(newTheme);
+            });
+
+            function updateThemeIcon(theme) {
+                if (!themeIcon) return;
+
+                if (theme === 'dark') {
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                } else {
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                }
+            }
+        }
+
+        // Mobile Menu
+        function initMobileMenu() {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+
+            if (mobileMenuToggle && navMenu) {
+                mobileMenuToggle.addEventListener('click', function () {
+                    navMenu.classList.toggle('mobile-open');
+
+                    // Update menu icon
+                    const icon = mobileMenuToggle.querySelector('i');
+                    if (navMenu.classList.contains('mobile-open')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+
+                // Close mobile menu when clicking on a link
+                const navLinks = navMenu.querySelectorAll('a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function () {
+                        navMenu.classList.remove('mobile-open');
+                        const icon = mobileMenuToggle.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    });
+                });
+            }
+
+            // Show/hide mobile menu button based on screen size
+            function handleResize() {
+                const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+                const navMenu = document.getElementById('nav-menu');
+
+                if (window.innerWidth <= 768) {
+                    mobileMenuToggle.style.display = 'block';
+                    if (!navMenu.classList.contains('mobile-open')) {
+                        navMenu.style.display = 'none';
+                    }
+                } else {
+                    mobileMenuToggle.style.display = 'none';
+                    navMenu.style.display = 'flex';
+                    navMenu.classList.remove('mobile-open');
+                }
+            }
+
+            // Initial check
+            handleResize();
+
+            // Listen for resize events
+            window.addEventListener('resize', handleResize);
+        }
+
+        // Navigation
+        function initNavigation() {
+            const header = document.querySelector('header');
+
+            if (!header) return;
+
+            // Sticky header on scroll
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 100) {
+                    header.style.boxShadow = '0 5px 15px var(--shadow-color)';
+                } else {
+                    header.style.boxShadow = '0 2px 10px var(--shadow-color)';
+                }
+
+                // Active section highlighting
+                highlightActiveSection();
+            });
+
+            // Smooth scrolling for anchor links
+            const anchorLinks = document.querySelectorAll('a[href^="#"]');
+            anchorLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const targetPosition = targetElement.offsetTop - headerHeight;
+
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Active Section Highlighting
+        function highlightActiveSection() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('header nav a');
+
+            let currentSection = '';
+            const scrollPosition = window.scrollY + 100;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    currentSection = sectionId;
+                }
+            });
+
+            navLinks.forEach(link => {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const defaultColor = currentTheme === 'dark' ? '#f8f9fa' : '#1a1a2e';
+
+                link.style.color = defaultColor;
+                const href = link.getAttribute('href');
+
+                if (href === `#${currentSection}`) {
+                    link.style.color = '#3a86ff';
+                }
+            });
+        }
+
+        // Project Filter
+        function initProjectFilter() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => {
+                        const currentTheme = document.documentElement.getAttribute('data-theme');
+                        if (currentTheme === 'dark') {
+                            btn.style.background = '#16213e';
+                        } else {
+                            btn.style.background = '#e9ecef';
+                        }
+                        btn.style.color = '#6c757d';
+                    });
+
+                    // Add active class to clicked button
+                    this.style.background = 'linear-gradient(135deg,#3a86ff,#8338ec)';
+                    this.style.color = 'white';
+
+                    const filterValue = this.getAttribute('data-filter');
+
+                    // Filter projects
+                    projectCards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        }
+
+        // Project Modals
+        function initProjectModals() {
+            const modal = document.getElementById('project-modal');
+            const closeModal = document.querySelector('.close-modal');
+            const viewDetailsButtons = document.querySelectorAll('.view-details');
+
+            if (!modal) return;
+
+            // Project data
+            const projects = {
+                1: {
+                    title: "E-commerce Platform",
+                    category: "Web Development",
+                    description: "A fully responsive e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product catalog, shopping cart, payment integration, and admin dashboard.",
+                    technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe API"],
+                    image: "#",
+                    liveUrl: "#",
+                    githubUrl: "https://github.com/mdtanveer0786"
+                },
+                2: {
+                    title: "Fitness Tracking App",
+                    category: "Mobile Development",
+                    description: "A cross-platform mobile application for tracking workouts, nutrition, and progress. Includes social features, personalized recommendations, and integration with wearable devices.",
+                    technologies: ["React Native", "Firebase", "Redux", "Chart.js"],
+                    image: "#",
+                    liveUrl: "#",
+                    githubUrl: "https://github.com/mdtanveer0786"
+                },
+                3: {
+                    title: "Brand Identity Design",
+                    category: "UI/UX Design",
+                    description: "Complete brand identity design including logo, color palette, typography, and brand guidelines for a modern tech startup.",
+                    technologies: ["Figma", "Adobe Illustrator", "Photoshop", "InVision"],
+                    image: "#",
+                    liveUrl: "#",
+                    githubUrl: "https://github.com/mdtanveer0786"
+                },
+                4: {
+                    title: "SaaS Dashboard",
+                    category: "Web Development",
+                    description: "A comprehensive SaaS dashboard for analytics and business intelligence with real-time data visualization and reporting features.",
+                    technologies: ["Vue.js", "D3.js", "Node.js", "PostgreSQL", "AWS"],
+                    image: "#",
+                    liveUrl: "#",
+                    githubUrl: "https://github.com/mdtanveer0786"
+                }
+            };
+
+            // Open modal when view details is clicked - REMOVED FOR EYE ICONS
+            // Now eye icons will directly go to GitHub via href
+            viewDetailsButtons.forEach(button => {
+                button.addEventListener('click', function (e) {
+                    // Only prevent default if it's not an external link
+                    if (!this.getAttribute('href').includes('github.com')) {
+                        e.preventDefault();
+                        const projectId = this.getAttribute('data-project');
+                        const project = projects[projectId];
+
+                        if (project) {
+                            openProjectModal(project);
+                        }
+                    }
+                    // If it's a GitHub link, let the default behavior happen (redirect to GitHub)
+                });
+            });
+
+            // Close modal
+            if (closeModal) {
+                closeModal.addEventListener('click', function () {
+                    closeProjectModal();
+                });
+            }
+
+            // Close modal when clicking outside
+            window.addEventListener('click', function (e) {
+                if (e.target === modal) {
+                    closeProjectModal();
+                }
+            });
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && modal.style.display === 'flex') {
+                    closeProjectModal();
+                }
+            });
+
+            function openProjectModal(project) {
+                const modalBody = document.querySelector('.modal-body');
+
+                modalBody.innerHTML = `
+            <div style="display:flex;flex-direction:column;">
+                <div style="height:300px;background:linear-gradient(135deg,#3a86ff,#8338ec);"></div>
+                <div style="padding:40px;">
+                    <h2 style="font-size:2rem;margin-bottom:10px;">${project.title}</h2>
+                    <p style="color:#6c757d;margin-bottom:20px;">${project.category}</p>
+                    <p style="margin-bottom:25px;line-height:1.6;">${project.description}</p>
+                    <div style="margin-bottom:25px;">
+                        <h4 style="margin-bottom:15px;">Technologies Used:</h4>
+                        <div style="display:flex;flex-wrap:wrap;gap:10px;">
+                            ${project.technologies.map(tech => `<span style="padding:8px 15px;background:#f8f9fa;border-radius:20px;font-size:0.9rem;">${tech}</span>`).join('')}
+                        </div>
+                    </div>
+                    <div style="display:flex;gap:15px;">
+                        <a href="${project.liveUrl}" style="padding:12px 25px;background:linear-gradient(135deg,#3a86ff,#8338ec);color:white;border-radius:8px;font-weight:600;text-decoration:none;">View Live</a>
+                        <a href="${project.githubUrl}" style="padding:12px 25px;background:transparent;color:#3a86ff;border:2px solid #3a86ff;border-radius:8px;font-weight:600;text-decoration:none;">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        `;
+
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeProjectModal() {
+                const modal = document.getElementById('project-modal');
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }        // Contact Form
+        function initContactForm() {
+            const contactForm = document.getElementById('contact-form');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    if (validateContactForm()) {
+                        // Show success message
+                        showFormMessage('Message sent successfully!', 'success');
+                        contactForm.reset();
+                    }
+                });
+            }
+
+            function validateContactForm() {
+                const name = document.getElementById('name');
+                const email = document.getElementById('email');
+                const subject = document.getElementById('subject');
+                const message = document.getElementById('message');
+
+                let isValid = true;
+
+                // Reset previous error states
+                clearErrors();
+
+                // Name validation
+                if (name.value.trim() === '') {
+                    showError(name, 'Name is required');
+                    isValid = false;
+                }
+
+                // Email validation
+                if (email.value.trim() === '') {
+                    showError(email, 'Email is required');
+                    isValid = false;
+                } else if (!isValidEmail(email.value)) {
+                    showError(email, 'Please enter a valid email address');
+                    isValid = false;
+                }
+
+                // Subject validation
+                if (subject.value.trim() === '') {
+                    showError(subject, 'Subject is required');
+                    isValid = false;
+                }
+
+                // Message validation
+                if (message.value.trim() === '') {
+                    showError(message, 'Message is required');
+                    isValid = false;
+                } else if (message.value.trim().length < 10) {
+                    showError(message, 'Message must be at least 10 characters long');
+                    isValid = false;
+                }
+
+                return isValid;
+            }
+
+            function showError(input, message) {
+                input.style.borderColor = '#e63946';
+
+                let errorElement = input.parentNode.querySelector('.error-message');
+                if (!errorElement) {
+                    errorElement = document.createElement('div');
+                    errorElement.className = 'error-message';
+                    errorElement.style.color = '#e63946';
+                    errorElement.style.fontSize = '0.9rem';
+                    errorElement.style.marginTop = '5px';
+                    input.parentNode.appendChild(errorElement);
+                }
+
+                errorElement.textContent = message;
+            }
+
+            function clearErrors() {
+                const inputs = document.querySelectorAll('#contact-form input, #contact-form textarea');
+                inputs.forEach(input => {
+                    input.style.borderColor = '#e9ecef';
+
+                    const errorElement = input.parentNode.querySelector('.error-message');
+                    if (errorElement) {
+                        errorElement.remove();
+                    }
+                });
+            }
+
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+            function showFormMessage(message, type) {
+                // Remove existing message
+                const existingMessage = document.querySelector('.form-message');
+                if (existingMessage) {
+                    existingMessage.remove();
+                }
+
+                // Create new message
+                const messageElement = document.createElement('div');
+                messageElement.className = `form-message ${type}`;
+                messageElement.textContent = message;
+                messageElement.style.padding = '15px';
+                messageElement.style.marginBottom = '20px';
+                messageElement.style.borderRadius = '8px';
+                messageElement.style.textAlign = 'center';
+                messageElement.style.fontWeight = '600';
+
+                if (type === 'success') {
+                    messageElement.style.background = 'rgba(56, 176, 0, 0.1)';
+                    messageElement.style.color = '#38b000';
+                    messageElement.style.border = '1px solid #38b000';
+                } else {
+                    messageElement.style.background = 'rgba(230, 57, 70, 0.1)';
+                    messageElement.style.color = '#e63946';
+                    messageElement.style.border = '1px solid #e63946';
+                }
+
+                // Insert message
+                const contactForm = document.getElementById('contact-form');
+                contactForm.insertBefore(messageElement, contactForm.firstChild);
+
+                // Remove message after 5 seconds
+                setTimeout(() => {
+                    messageElement.remove();
+                }, 5000);
+            }
+        }
+
+        // Animations
+        function initAnimations() {
+            // Add animation classes to elements
+            const animatedElements = document.querySelectorAll('section, .service-card, .tech-item, .project-card');
+
+            animatedElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'all 0.6s ease';
+            });
+
+            // Intersection Observer for scroll animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+        }
+
+        // Scroll Effects
+        function initScrollEffects() {
+            // Add scroll-based animations if needed
+        }
+    </script>
+</body>
+
+</html>
