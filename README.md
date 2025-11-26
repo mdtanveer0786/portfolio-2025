@@ -41,15 +41,7 @@ A modern, responsive portfolio website showcasing my skills, projects, and exper
 6. **Contact** - Contact form and information
 7. **Footer** - Social links and quick navigation
 
-## 🚀 Quick Start
-
-1. Clone the repository:
-```bash
-git clone https://github.com/mdtanveer0786/portfolio.git
-
-Open `index.html` in your browser
-
-Or simply visit the live demo
+## 🚀 Simply visit the live demo
 
 ## 🌐 Live Demo
 
