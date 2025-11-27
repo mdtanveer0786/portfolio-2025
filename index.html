@@ -216,39 +216,47 @@
         <div
             style="max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;">
             <a href="#hero" style="text-decoration:none;">
-                <div style="font-size:1.5rem;font-weight:700;color:var(--accent-color);">Md Tanveer</div>
+                <div
+                    style="font-size:1.6rem;font-weight:700;transition:all 0.3s ease;padding:8px 16px;border-radius:8px;font-family:'Courier New', monospace;">
+                    <span style="color:#3a86ff;">&lt;</span>
+                    <span style="color:var(--accent-color);">Md Tanveer</span>
+                    <span style="color:#8338ec;">/&gt;</span>
+                </div>
             </a>
 
             <nav>
                 <ul id="nav-menu" style="display:flex;gap:30px;margin:0;padding:0;list-style:none;">
                     <li><a href="#hero" class="nav-link"
-                            style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;">Home</a>
+                            style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;color:inherit;">Home</a>
                     </li>
                     <li><a href="#about" class="nav-link"
-                            style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;">About</a>
+                            style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;color:inherit;">About</a>
+                    </li>
+                    <li><a href="#education" class="nav-link"
+                            style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;color:inherit;">Eduction</a>
                     </li>
                     <li><a href="#tech-stack" class="nav-link"
-                            style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;">Skills</a>
+                            style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;color:inherit;">Skills</a>
                     </li>
                     <li><a href="#services" class="nav-link"
-                            style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;">Services</a>
+                            style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;color:inherit;">Services</a>
                     </li>
                     <li><a href="#projects" class="nav-link"
-                            style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;">Projects</a>
+                            style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;color:inherit;">Projects</a>
                     </li>
                     <li><a href="#contact" class="nav-link"
-                            style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;">Contact</a>
+                            style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;color:inherit;">Contact</a>
                     </li>
                 </ul>
             </nav>
 
             <div style="display:flex;align-items:center;gap:15px;">
                 <button id="theme-toggle"
-                    style="background:none;border:none;cursor:pointer;font-size:1.2rem;color:var(--accent-color);">
+                    style="background:none;border:none;cursor:pointer;font-size:1.2rem;color:var(--accent-color);transition:all 0.3s ease;padding:8px;border-radius:50%;">
                     <i class="fas fa-moon"></i>
                 </button>
                 <button id="mobile-menu-toggle"
-                    style="display:none;background:none;border:none;cursor:pointer;font-size:1.2rem;color:var(--accent-color);">
+                    style="display:none;background:none;border:none;cursor:pointer;font-size:1.2rem;color:var(--accent-color);transition:all 0.3s ease;padding:8px;border-radius:4px;">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -256,6 +264,30 @@
     </header>
 
     <style>
+        /* Hover Effects */
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+            background: rgba(58, 134, 255, 0.1) !important;
+            transform: translateY(-2px);
+        }
+
+        .nav-link.active {
+            color: var(--accent-color) !important;
+            background: rgba(58, 134, 255, 0.1);
+        }
+
+        a:hover>div {
+            color: var(--accent-color) !important;
+            background: rgba(58, 134, 255, 0.1) !important;
+            transform: translateY(-2px);
+        }
+
+        #theme-toggle:hover,
+        #mobile-menu-toggle:hover {
+            background: rgba(58, 134, 255, 0.1) !important;
+            transform: scale(1.1);
+        }
+
         /* Mobile Responsive Styles */
         @media (max-width: 768px) {
             #mobile-menu-toggle {
@@ -285,6 +317,7 @@
             }
         }
     </style>
+
     <!-- Hero Section -->
     <section id="hero"
         style="min-height:100vh;display:flex;align-items:center;padding:100px 0 50px;background:linear-gradient(135deg,var(--bg-primary) 0%,var(--bg-tertiary) 100%);position:relative;overflow:hidden;">
@@ -301,17 +334,30 @@
                     Stack Developer who loves building fast, modern, and scalable web applications. I enjoy solving
                     real-world problems using clean code, intuitive UI, and efficient backend systems. My focus is on
                     creating applications that are user-friendly, secure, and high-performance.</p>
-                <div style="display:flex;gap:15px;flex-wrap:wrap;">
-                    <a href="#projects"
-                        style="display:inline-block;padding:12px 30px;background:linear-gradient(135deg,#3a86ff,#8338ec);color:white;border-radius:8px;font-weight:600;text-align:center;cursor:pointer;transition:all 0.3s ease;border:none;font-size:1rem;text-decoration:none;">View
-                        My Work</a>
+
+                <!-- RESPONSIVE BUTTONS -->
+                <div style="display:flex;gap:15px;flex-wrap:wrap;width:100%;">
                     <a href="#contact"
-                        style="display:inline-block;padding:12px 30px;background-color:transparent;color:var(--accent-color);border:2px solid var(--accent-color);border-radius:8px;font-weight:600;text-align:center;cursor:pointer;transition:all 0.3s ease;font-size:1rem;text-decoration:none;">Get
-                        In Touch</a>
+                        onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 25px rgba(58,134,255,0.5)';this.style.background='linear-gradient(135deg,#8338ec,#3a86ff)'"
+                        onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 15px rgba(58,134,255,0.3)';this.style.background='linear-gradient(135deg,#3a86ff,#8338ec)'"
+                        style="display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 30px;background:linear-gradient(135deg,#3a86ff,#8338ec);color:white;border-radius:8px;font-weight:600;text-align:center;cursor:pointer;transition:all 0.3s ease;border:none;font-size:1rem;text-decoration:none;box-shadow:0 4px 15px rgba(58,134,255,0.3);flex:1;min-width:200px;">
+                        <i class="fas fa-paper-plane"></i>
+                        Get In Touch
+                    </a>
+
+                    <a href="./MD_TANVEER_ALAM_RESUME.pdf" download="Md_Tanveer_Alam_Resume.pdf"
+                        onmouseover="this.style.transform='translateY(-3px)';this.style.background='var(--accent-color)';this.style.color='white';this.style.boxShadow='0 8px 25px rgba(58,134,255,0.4)';this.style.borderColor='var(--accent-color)'"
+                        onmouseout="this.style.transform='translateY(0)';this.style.background='transparent';this.style.color='var(--accent-color)';this.style.boxShadow='0 4px 15px rgba(58,134,255,0.2)';this.style.borderColor='var(--accent-color)'"
+                        style="display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 30px;background-color:transparent;color:var(--accent-color);border:2px solid var(--accent-color);border-radius:8px;font-weight:600;text-align:center;cursor:pointer;transition:all 0.3s ease;font-size:1rem;text-decoration:none;box-shadow:0 4px 15px rgba(58,134,255,0.2);flex:1;min-width:200px;">
+                        <i class="fas fa-download"></i>
+                        Download Resume
+                    </a>
                 </div>
             </div>
+
+            <!-- PROFILE IMAGE SECTION -->
             <div style="flex:1;min-width:300px;position:relative;">
-                <div style="width:350px;height:350px;margin:0 auto;position:relative;">
+                <div style="width:100%;max-width:350px;height:350px;margin:0 auto;position:relative;">
                     <div
                         style="width:100%;height:100%;border-radius:50%;background:linear-gradient(135deg,#3a86ff,#8338ec);display:flex;justify-content:center;align-items:center;box-shadow:0 20px 40px rgba(58,134,255,0.3);">
                         <div
@@ -337,7 +383,47 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <style>
+        /* Responsive Button Styles */
+        @media (max-width: 768px) {
+            #hero .flex-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            #hero .flex-buttons a {
+                width: 100% !important;
+                min-width: 100% !important;
+                flex: 1 1 100% !important;
+                margin-bottom: 10px;
+            }
+
+            #hero h1 {
+                font-size: 2.5rem !important;
+            }
+
+            #hero h2 {
+                font-size: 1.5rem !important;
+            }
+
+            #hero p {
+                font-size: 1rem !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #hero .flex-buttons a {
+                padding: 15px 20px !important;
+                font-size: 0.9rem !important;
+            }
+
+            #hero h1 {
+                font-size: 2rem !important;
+            }
+        }
+    </style>
+
+    <!-- About Section - BEST VERSION -->
     <section id="about" style="padding:100px 0;background-color:var(--bg-secondary);">
         <div style="max-width:1200px;margin:0 auto;padding:0 20px;">
             <div style="text-align:center;margin-bottom:60px;">
@@ -350,7 +436,6 @@
                     <div style="width:100%;max-width:400px;margin:0 auto;">
                         <div
                             style="width:100%;border-radius:20px;overflow:hidden;box-shadow:0 20px 40px var(--shadow-color);">
-                            <!-- Replace this div with your image -->
                             <img src="./profile.jpg" alt="Md Tanveer Alam"
                                 style="width:100%;height:400px;object-fit:cover;">
                         </div>
@@ -358,49 +443,201 @@
                 </div>
                 <div style="flex:1;min-width:300px;">
                     <h3 style="font-size:1.8rem;margin-bottom:20px;color:var(--accent-color);">Full Stack Developer</h3>
-                    <p style="margin-bottom:30px;font-size:1.1rem;color:var(--text-secondary);">I am a passionate Full
-                        Stack Developer
-                        who loves building fast, modern, and scalable web applications. I enjoy solving real-world
-                        problems using clean code, intuitive UI, and efficient backend systems. My focus is on creating
-                        applications that are user-friendly, secure, and high-performance.
-                        With experience in Frontend, Backend, and Databases, I can handle complete end-to-end
-                        development — from designing responsive interfaces to building robust server-side logic and REST
-                        APIs.
-                    </p>
+
+                    <!-- Enhanced Personal Story -->
                     <div style="margin-bottom:30px;">
-                        <div
-                            style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--bg-tertiary);">
-                            <span style="font-weight:600;">Name:</span>
-                            <span>Md Tanveer Alam</span>
-                        </div>
-                        <div
-                            style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--bg-tertiary);">
-                            <span style="font-weight:600;">Email:</span>
-                            <span>mdtanweeralam0002@gmail.com</span>
-                        </div>
-                        <div
-                            style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--bg-tertiary);">
-                            <span style="font-weight:600;">Location:</span>
-                            <span>Delhi, India</span>
-                        </div>
-                        <div
-                            style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--bg-tertiary);">
-                            <span style="font-weight:600;">Experience:</span>
-                            <span>1+ Years</span>
+                        <p style="margin-bottom:20px;font-size:1.1rem;color:var(--text-secondary);line-height:1.7;">
+                            I'm a passionate Full Stack Developer with 1+ years of experience crafting digital solutions
+                            that make a difference. My journey in web development started with curiosity about how
+                            websites work, and has evolved into a career dedicated to building fast, modern, and
+                            scalable applications.
+                        </p>
+                        <p style="margin-bottom:20px;font-size:1.1rem;color:var(--text-secondary);line-height:1.7;">
+                            I specialize in the <strong style="color:var(--accent-color);">MERN stack</strong> and enjoy
+                            solving complex problems with clean, efficient code. Whether it's creating intuitive user
+                            interfaces with React or building robust backend systems with Node.js, I'm committed to
+                            delivering solutions that are not just functional, but exceptional.
+                        </p>
+                    </div>
+
+                    <!-- Skills Badges -->
+                    <div style="margin-bottom:30px;">
+                        <h4 style="font-size:1.3rem;margin-bottom:15px;color:var(--text-primary);">Technologies I Work
+                            With</h4>
+                        <div style="display:flex;flex-wrap:wrap;gap:10px;">
+                            <span
+                                style="padding:8px 16px;background:var(--bg-tertiary);border-radius:20px;font-size:0.9rem;color:var(--text-secondary);font-weight:500;">React.js</span>
+                            <span
+                                style="padding:8px 16px;background:var(--bg-tertiary);border-radius:20px;font-size:0.9rem;color:var(--text-secondary);font-weight:500;">Node.js</span>
+                            <span
+                                style="padding:8px 16px;background:var(--bg-tertiary);border-radius:20px;font-size:0.9rem;color:var(--text-secondary);font-weight:500;">MongoDB</span>
+                            <span
+                                style="padding:8px 16px;background:var(--bg-tertiary);border-radius:20px;font-size:0.9rem;color:var(--text-secondary);font-weight:500;">Express.js</span>
+                            <span
+                                style="padding:8px 16px;background:var(--bg-tertiary);border-radius:20px;font-size:0.9rem;color:var(--text-secondary);font-weight:500;">JavaScript</span>
+                            <span
+                                style="padding:8px 16px;background:var(--bg-tertiary);border-radius:20px;font-size:0.9rem;color:var(--text-secondary);font-weight:500;">PHP</span>
                         </div>
                     </div>
 
+                    <!-- Call-to-Action Buttons -->
                     <div style="display:flex;gap:15px;flex-wrap:wrap;">
-                        <a href="./MD_TANVEER_ALAM_RESUME.pdf" download="Md_Tanveer_Alam_Resume.pdf"
-                            style="display:inline-block;padding:12px 30px;background:linear-gradient(135deg,#3a86ff,#8338ec);color:white;border-radius:8px;font-weight:600;text-align:center;cursor:pointer;transition:all 0.3s ease;border:none;font-size:1rem;text-decoration:none;">
-                            Download Resume </a>
-
+                        <a href="#contact"
+                            style="display:inline-flex;align-items:center;gap:8px;padding:12px 25px;background:linear-gradient(135deg, var(--accent-color), #8338ec);color:white;border-radius:8px;font-weight:600;text-decoration:none;transition:all 0.3s ease;"
+                            onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 25px rgba(58,134,255,0.4)';"
+                            onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+                            <i class="fas fa-paper-plane"></i>
+                            Hire Me
+                        </a>
+                        <a href="#projects"
+                            style="display:inline-flex;align-items:center;gap:8px;padding:12px 25px;background:transparent;color:var(--accent-color);border:2px solid var(--accent-color);border-radius:8px;font-weight:600;text-decoration:none;transition:all 0.3s ease;"
+                            onmouseover="this.style.background='var(--accent-color)';this.style.color='white';this.style.transform='translateY(-2px)';"
+                            onmouseout="this.style.background='transparent';this.style.color='var(--accent-color)';this.style.transform='translateY(0)';">
+                            <i class="fas fa-eye"></i>
+                            View Projects
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Education Section -->
+    <section id="education" style="padding:100px 0;background-color:var(--bg-secondary);">
+        <div style="max-width:1200px;margin:0 auto;padding:0 20px;">
+            <div style="text-align:center;margin-bottom:60px;">
+                <h2 style="font-size:2.5rem;margin-bottom:15px;font-weight:700;">Education</h2>
+                <p style="font-size:1.2rem;color:var(--text-secondary);max-width:600px;margin:0 auto;">My academic
+                    background and qualifications</p>
+            </div>
+
+            <div style="max-width:800px;margin:0 auto;position:relative;">
+                <!-- Timeline -->
+                <div
+                    style="position:absolute;left:30px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom, var(--accent-color), #8338ec);">
+                </div>
+
+                <!-- Education Item 1 -->
+                <div style="display:flex;gap:30px;margin-bottom:50px;position:relative;"
+                    onmouseover="this.style.transform='translateY(-5px)';this.style.transition='all 0.3s ease';"
+                    onmouseout="this.style.transform='translateY(0)';this.style.transition='all 0.3s ease';">
+                    <div style="width:60px;height:60px;flex-shrink:0;background:linear-gradient(135deg, var(--accent-color), #8338ec);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:1.5rem;z-index:2;transition:all 0.3s ease;"
+                        onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 0 20px rgba(58,134,255,0.5)';"
+                        onmouseout="this.style.transform='scale(1)';this.style.boxShadow='none';">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div style="flex:1;background:var(--card-bg);padding:30px;border-radius:12px;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;"
+                        onmouseover="this.style.background='linear-gradient(135deg, var(--accent-color), #8338ec)';this.style.boxShadow='0 10px 30px rgba(58,134,255,0.3)';this.querySelector('h3').style.color='white';this.querySelector('h4').style.color='white';this.querySelector('p').style.color='rgba(255,255,255,0.9)';Array.from(this.querySelectorAll('span')).forEach(span => span.style.color='white');Array.from(this.querySelectorAll('span')).forEach(span => span.style.background='rgba(255,255,255,0.2)');"
+                        onmouseout="this.style.background='var(--card-bg)';this.style.boxShadow='0 5px 15px var(--shadow-color)';this.querySelector('h3').style.color='var(--text-primary)';this.querySelector('h4').style.color='var(--accent-color)';this.querySelector('p').style.color='var(--text-secondary)';Array.from(this.querySelectorAll('span')).forEach(span => span.style.color='var(--text-secondary)');Array.from(this.querySelectorAll('span')).forEach(span => span.style.background='var(--bg-tertiary)');">
+                        <div
+                            style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:15px;flex-wrap:wrap;gap:10px;">
+                            <h3 style="font-size:1.5rem;margin:0;color:var(--text-primary);transition:all 0.3s ease;">
+                                Computer Science Engineering (B.Tech)</h3>
+                            <span
+                                style="background:linear-gradient(135deg, var(--accent-color), #8338ec);color:white;padding:5px 15px;border-radius:20px;font-size:0.9rem;font-weight:600;transition:all 0.3s ease;">2021
+                                - 2025</span>
+                        </div>
+                        <h4
+                            style="color:var(--accent-color);margin:0 0 10px 0;font-size:1.1rem;transition:all 0.3s ease;">
+                            Bikaner Technical University</h4>
+                        <p
+                            style="color:var(--text-secondary);margin-bottom:15px;line-height:1.6;transition:all 0.3s ease;">
+                            Specialized in software development, database management, and web technologies. Completed
+                            projects in full-stack development and mobile applications.</p>
+                        <div style="display:flex;flex-wrap:wrap;gap:10px;">
+                            <span
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);transition:all 0.3s ease;">CGPA:
+                                7/10</span>
+                            <span
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);transition:all 0.3s ease;">Computer
+                                Science</span>
+                            <span
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);transition:all 0.3s ease;">Full-time</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Item 2 -->
+                <div style="display:flex;gap:30px;margin-bottom:50px;position:relative;"
+                    onmouseover="this.style.transform='translateY(-5px)';this.style.transition='all 0.3s ease';"
+                    onmouseout="this.style.transform='translateY(0)';this.style.transition='all 0.3s ease';">
+                    <div style="width:60px;height:60px;flex-shrink:0;background:linear-gradient(135deg, var(--accent-color), #8338ec);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:1.5rem;z-index:2;transition:all 0.3s ease;"
+                        onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 0 20px rgba(58,134,255,0.5)';"
+                        onmouseout="this.style.transform='scale(1)';this.style.boxShadow='none';">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div style="flex:1;background:var(--card-bg);padding:30px;border-radius:12px;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;"
+                        onmouseover="this.style.background='linear-gradient(135deg, var(--accent-color), #8338ec)';this.style.boxShadow='0 10px 30px rgba(58,134,255,0.3)';this.querySelector('h3').style.color='white';this.querySelector('h4').style.color='white';this.querySelector('p').style.color='rgba(255,255,255,0.9)';Array.from(this.querySelectorAll('span')).forEach(span => span.style.color='white');Array.from(this.querySelectorAll('span')).forEach(span => span.style.background='rgba(255,255,255,0.2)');"
+                        onmouseout="this.style.background='var(--card-bg)';this.style.boxShadow='0 5px 15px var(--shadow-color)';this.querySelector('h3').style.color='var(--text-primary)';this.querySelector('h4').style.color='var(--accent-color)';this.querySelector('p').style.color='var(--text-secondary)';Array.from(this.querySelectorAll('span')).forEach(span => span.style.color='var(--text-secondary)');Array.from(this.querySelectorAll('span')).forEach(span => span.style.background='var(--bg-tertiary)');">
+                        <div
+                            style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:15px;flex-wrap:wrap;gap:10px;">
+                            <h3 style="font-size:1.5rem;margin:0;color:var(--text-primary);transition:all 0.3s ease;">
+                                Full Stack Web Development Certification</h3>
+                            <span
+                                style="background:linear-gradient(135deg, var(--accent-color), #8338ec);color:white;padding:5px 15px;border-radius:20px;font-size:0.9rem;font-weight:600;transition:all 0.3s ease;">2023
+                                - 2025</span>
+                        </div>
+                        <h4
+                            style="color:var(--accent-color);margin:0 0 10px 0;font-size:1.1rem;transition:all 0.3s ease;">
+                            AccioJob / Udemy</h4>
+                        <p
+                            style="color:var(--text-secondary);margin-bottom:15px;line-height:1.6;transition:all 0.3s ease;">
+                            Comprehensive training in modern web development technologies including HTML, CSS,
+                            JavaScript, React, Node.js, Express.js, MongoDB, and deployment strategies.</p>
+                        <div style="display:flex;flex-wrap:wrap;gap:10px;">
+                            <span
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);transition:all 0.3s ease;">Grade:
+                                A</span>
+                            <span
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);transition:all 0.3s ease;">Online</span>
+                            <span
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);transition:all 0.3s ease;">18
+                                Months</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Item 3 -->
+                <div style="display:flex;gap:30px;position:relative;"
+                    onmouseover="this.style.transform='translateY(-5px)';this.style.transition='all 0.3s ease';"
+                    onmouseout="this.style.transform='translateY(0)';this.style.transition='all 0.3s ease';">
+                    <div style="width:60px;height:60px;flex-shrink:0;background:linear-gradient(135deg, var(--accent-color), #8338ec);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:1.5rem;z-index:2;transition:all 0.3s ease;"
+                        onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 0 20px rgba(58,134,255,0.5)';"
+                        onmouseout="this.style.transform='scale(1)';this.style.boxShadow='none';">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div style="flex:1;background:var(--card-bg);padding:30px;border-radius:12px;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;"
+                        onmouseover="this.style.background='linear-gradient(135deg, var(--accent-color), #8338ec)';this.style.boxShadow='0 10px 30px rgba(58,134,255,0.3)';this.querySelector('h3').style.color='white';this.querySelector('h4').style.color='white';this.querySelector('p').style.color='rgba(255,255,255,0.9)';Array.from(this.querySelectorAll('span')).forEach(span => span.style.color='white');Array.from(this.querySelectorAll('span')).forEach(span => span.style.background='rgba(255,255,255,0.2)');"
+                        onmouseout="this.style.background='var(--card-bg)';this.style.boxShadow='0 5px 15px var(--shadow-color)';this.querySelector('h3').style.color='var(--text-primary)';this.querySelector('h4').style.color='var(--accent-color)';this.querySelector('p').style.color='var(--text-secondary)';Array.from(this.querySelectorAll('span')).forEach(span => span.style.color='var(--text-secondary)');Array.from(this.querySelectorAll('span')).forEach(span => span.style.background='var(--bg-tertiary)');">
+                        <div
+                            style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:15px;flex-wrap:wrap;gap:10px;">
+                            <h3 style="font-size:1.5rem;margin:0;color:var(--text-primary);transition:all 0.3s ease;">
+                                Senior Secondary Education (12th)</h3>
+                            <span
+                                style="background:linear-gradient(135deg, var(--accent-color), #8338ec);color:white;padding:5px 15px;border-radius:20px;font-size:0.9rem;font-weight:600;transition:all 0.3s ease;">2018
+                                - 2020</span>
+                        </div>
+                        <h4
+                            style="color:var(--accent-color);margin:0 0 10px 0;font-size:1.1rem;transition:all 0.3s ease;">
+                            Bihar Board</h4>
+                        <p
+                            style="color:var(--text-secondary);margin-bottom:15px;line-height:1.6;transition:all 0.3s ease;">
+                            Completed senior secondary education with focus on Computer Science and Mathematics.</p>
+                        <div style="display:flex;flex-wrap:wrap;gap:10px;">
+                            <span
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);transition:all 0.3s ease;">Percentage:
+                                65%</span>
+                            <span
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);transition:all 0.3s ease;">Science
+                                Stream</span>
+                            <span
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);transition:all 0.3s ease;">PCM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Tech Stack Section -->
     <section id="tech-stack" style="padding:100px 0;background-color:var(--bg-primary);">
         <div style="max-width:1200px;margin:0 auto;padding:0 20px;">
@@ -546,7 +783,6 @@
         }
     </style>
 
-    <!-- Services Section -->
     <section id="services" style="padding:100px 0;background-color:var(--bg-secondary);">
         <div style="max-width:1200px;margin:0 auto;padding:0 20px;">
             <div style="text-align:center;margin-bottom:60px;">
@@ -556,52 +792,60 @@
             </div>
 
             <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:30px;">
+                <!-- Frontend Development -->
                 <div class="service-card"
                     style="padding:40px 30px;border-radius:12px;text-align:center;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;">
                     <div
                         style="width:80px;height:80px;background:linear-gradient(135deg,#3a86ff,#8338ec);border-radius:50%;display:flex;justify-content:center;align-items:center;margin:0 auto 25px;color:white;font-size:2rem;transition:all 0.3s ease;">
-                        <i class="fas fa-code"></i>
+                        <i class="fas fa-laptop-code"></i>
                     </div>
-                    <h3 style="font-size:1.5rem;margin-bottom:15px;transition:all 0.3s ease;">Web Development</h3>
-                    <p style="margin-bottom:20px;color:var(--text-secondary);transition:all 0.3s ease;">Custom web
-                        applications built with modern frameworks and best practices for performance and scalability.
-                    </p>
+                    <h3 style="font-size:1.5rem;margin-bottom:15px;transition:all 0.3s ease;">Frontend Development</h3>
+                    <p style="margin-bottom:20px;color:var(--text-secondary);transition:all 0.3s ease;">Creating
+                        responsive, interactive, and high-performance user interfaces with modern frameworks and best
+                        practices.</p>
                     <ul style="text-align:left;color:var(--text-secondary);transition:all 0.3s ease;">
-                        <li style="margin-bottom:8px;">✅ Responsive Design</li>
+                        <li style="margin-bottom:8px;">✅ React.js Applications</li>
+                        <li style="margin-bottom:8px;">✅ Responsive Web Design</li>
                         <li style="margin-bottom:8px;">✅ Performance Optimization</li>
                         <li style="margin-bottom:8px;">✅ Cross-browser Compatibility</li>
                     </ul>
                 </div>
 
+                <!-- Backend Development -->
                 <div class="service-card"
                     style="padding:40px 30px;border-radius:12px;text-align:center;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;">
                     <div
                         style="width:80px;height:80px;background:linear-gradient(135deg,#3a86ff,#8338ec);border-radius:50%;display:flex;justify-content:center;align-items:center;margin:0 auto 25px;color:white;font-size:2rem;transition:all 0.3s ease;">
-                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-server"></i>
                     </div>
-                    <h3 style="font-size:1.5rem;margin-bottom:15px;transition:all 0.3s ease;">Mobile Development</h3>
-                    <p style="margin-bottom:20px;color:var(--text-secondary);transition:all 0.3s ease;">Native and
-                        cross-platform mobile applications that provide seamless user experiences.</p>
+                    <h3 style="font-size:1.5rem;margin-bottom:15px;transition:all 0.3s ease;">Backend Development</h3>
+                    <p style="margin-bottom:20px;color:var(--text-secondary);transition:all 0.3s ease;">Building robust,
+                        scalable server-side applications and RESTful APIs with secure authentication and efficient data
+                        handling.</p>
                     <ul style="text-align:left;color:var(--text-secondary);transition:all 0.3s ease;">
-                        <li style="margin-bottom:8px;">✅ React Native</li>
-                        <li style="margin-bottom:8px;">✅ Flutter</li>
-                        <li style="margin-bottom:8px;">✅ Progressive Web Apps</li>
+                        <li style="margin-bottom:8px;">✅ Node.js & Express.js</li>
+                        <li style="margin-bottom:8px;">✅ REST API Development</li>
+                        <li style="margin-bottom:8px;">✅ Authentication & Security</li>
+                        <li style="margin-bottom:8px;">✅ Server Optimization</li>
                     </ul>
                 </div>
 
+                <!-- Database Management -->
                 <div class="service-card"
                     style="padding:40px 30px;border-radius:12px;text-align:center;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;">
                     <div
                         style="width:80px;height:80px;background:linear-gradient(135deg,#3a86ff,#8338ec);border-radius:50%;display:flex;justify-content:center;align-items:center;margin:0 auto 25px;color:white;font-size:2rem;transition:all 0.3s ease;">
-                        <i class="fas fa-palette"></i>
+                        <i class="fas fa-database"></i>
                     </div>
-                    <h3 style="font-size:1.5rem;margin-bottom:15px;transition:all 0.3s ease;">UI/UX Design</h3>
-                    <p style="margin-bottom:20px;color:var(--text-secondary);transition:all 0.3s ease;">User-centered
-                        design solutions that enhance usability and create engaging digital experiences.</p>
+                    <h3 style="font-size:1.5rem;margin-bottom:15px;transition:all 0.3s ease;">Database Management</h3>
+                    <p style="margin-bottom:20px;color:var(--text-secondary);transition:all 0.3s ease;">Designing and
+                        managing efficient database systems with proper schema design, queries optimization, and data
+                        security.</p>
                     <ul style="text-align:left;color:var(--text-secondary);transition:all 0.3s ease;">
-                        <li style="margin-bottom:8px;">✅ Wireframing & Prototyping</li>
-                        <li style="margin-bottom:8px;">✅ User Research</li>
-                        <li style="margin-bottom:8px;">✅ Interaction Design</li>
+                        <li style="margin-bottom:8px;">✅ MongoDB & Mongoose</li>
+                        <li style="margin-bottom:8px;">✅ MySQL & SQL Queries</li>
+                        <li style="margin-bottom:8px;">✅ Database Design</li>
+                        <li style="margin-bottom:8px;">✅ Data Security & Backup</li>
                     </ul>
                 </div>
             </div>
@@ -629,44 +873,49 @@
     </style>
 
     <!-- Projects Section -->
-    <!-- Projects Section -->
     <section id="projects" style="padding:100px 0;background-color:var(--bg-primary);">
         <div style="max-width:1200px;margin:0 auto;padding:0 20px;">
             <div style="text-align:center;margin-bottom:60px;">
                 <h2 style="font-size:2.5rem;margin-bottom:15px;font-weight:700;">Featured Projects</h2>
                 <p style="font-size:1.2rem;color:var(--text-secondary);max-width:600px;margin:0 auto;">A selection of my
-                    recent work
-                </p>
+                    recent work</p>
             </div>
 
             <div style="display:flex;justify-content:center;gap:15px;margin-bottom:40px;flex-wrap:wrap;">
                 <button class="filter-btn active" data-filter="all"
                     style="padding:10px 20px;background:linear-gradient(135deg,#3a86ff,#8338ec);color:white;border:none;border-radius:6px;cursor:pointer;font-weight:600;transition:all 0.3s ease;">All</button>
-                <button class="filter-btn" data-filter="web"
-                    style="padding:10px 20px;border:none;border-radius:6px;cursor:pointer;font-weight:600;transition:all 0.3s ease;">Web</button>
-                <button class="filter-btn" data-filter="mobile"
-                    style="padding:10px 20px;border:none;border-radius:6px;cursor:pointer;font-weight:600;transition:all 0.3s ease;">Mobile</button>
-                <button class="filter-btn" data-filter="design"
-                    style="padding:10px 20px;border:none;border-radius:6px;cursor:pointer;font-weight:600;transition:all 0.3s ease;">Design</button>
+                <button class="filter-btn" data-filter="frontend"
+                    style="padding:10px 20px;border:none;border-radius:6px;cursor:pointer;font-weight:600;transition:all 0.3s ease;">Frontend</button>
+                <button class="filter-btn" data-filter="backend"
+                    style="padding:10px 20px;border:none;border-radius:6px;cursor:pointer;font-weight:600;transition:all 0.3s ease;">Backend</button>
+                <button class="filter-btn" data-filter="fullstack"
+                    style="padding:10px 20px;border:none;border-radius:6px;cursor:pointer;font-weight:600;transition:all 0.3s ease;">Full
+                    Stack</button>
             </div>
 
             <div class="projects-grid"
                 style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:30px;">
-                <div class="project-card" data-category="web"
-                    style="border-radius:12px;overflow:hidden;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;">
+
+                <!-- Project 1: E-commerce Platform (Full Stack) -->
+                <div class="project-card" data-category="fullstack"
+                    style="border-radius:12px;overflow:hidden;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;"
+                    onmouseover="this.style.transform='translateY(-10px)';this.querySelector('.project-overlay').style.opacity='1';"
+                    onmouseout="this.style.transform='translateY(0)';this.querySelector('.project-overlay').style.opacity='0';">
                     <div
-                        style="height:200px;background:url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80') center/cover;position:relative;overflow:hidden;">
+                        style="height:200px;background:linear-gradient(135deg,#3a86ff,#8338ec);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;">
+                        <div style="text-align:center;color:white;padding:20px;">
+                            <i class="fas fa-shopping-cart" style="font-size:3rem;margin-bottom:15px;"></i>
+                            <h4 style="margin:0;font-size:1.2rem;">E-commerce Platform</h4>
+                        </div>
                         <div class="project-overlay"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);display:flex;justify-content:center;align-items:center;opacity:0;transition:all 0.3s ease;">
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);display:flex;justify-content:center;align-items:center;opacity:0;transition:all 0.3s ease;">
                             <div style="display:flex;gap:15px;">
-                                <a href="https://github.com/mdtanveer0786" target="_blank" class="view-details"
-                                    data-project="1"
-                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;">
+                                <a href="https://github.com/mdtanveer0786/ecommerce-platform" target="_blank"
+                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;text-decoration:none;">
                                     <i class="fas fa-eye"></i>
                                 </a>
-                                <a href="https://www.digifello.in/wp-content/uploads/2025/08/ecommerce-website-design.jpg"
-                                    target="_blank"
-                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;">
+                                <a href="https://ecommerce-demo-mdtanveer.netlify.app" target="_blank"
+                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;text-decoration:none;">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
                             </div>
@@ -674,96 +923,171 @@
                     </div>
                     <div style="padding:25px;">
                         <h3 style="font-size:1.3rem;margin-bottom:10px;">E-commerce Platform</h3>
-                        <p style="color:var(--text-secondary);">Web Development</p>
+                        <p style="color:var(--text-secondary);margin-bottom:15px;font-size:0.9rem;">Full-stack
+                            e-commerce solution with user authentication, product management, and payment integration.
+                        </p>
+                        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                            <span
+                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">React</span>
+                            <span
+                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">Node.js</span>
+                            <span
+                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">MongoDB</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-category="mobile"
-                    style="border-radius:12px;overflow:hidden;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;">
+                <!-- Project 2: Task Management App (Frontend) -->
+                <div class="project-card" data-category="frontend"
+                    style="border-radius:12px;overflow:hidden;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;"
+                    onmouseover="this.style.transform='translateY(-10px)';this.querySelector('.project-overlay').style.opacity='1';"
+                    onmouseout="this.style.transform='translateY(0)';this.querySelector('.project-overlay').style.opacity='0';">
                     <div
-                        style="height:200px;background:url('https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80') center/cover;position:relative;overflow:hidden;">
+                        style="height:200px;background:linear-gradient(135deg,#ff6b6b,#ee5a24);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;">
+                        <div style="text-align:center;color:white;padding:20px;">
+                            <i class="fas fa-tasks" style="font-size:3rem;margin-bottom:15px;"></i>
+                            <h4 style="margin:0;font-size:1.2rem;">Task Manager</h4>
+                        </div>
                         <div class="project-overlay"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);display:flex;justify-content:center;align-items:center;opacity:0;transition:all 0.3s ease;">
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);display:flex;justify-content:center;align-items:center;opacity:0;transition:all 0.3s ease;">
                             <div style="display:flex;gap:15px;">
-                                <a href="https://github.com/mdtanveer0786" target="_blank" class="view-details"
-                                    data-project="2"
-                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;">
+                                <a href="https://github.com/mdtanveer0786/task-manager" target="_blank"
+                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;text-decoration:none;">
                                     <i class="fas fa-eye"></i>
                                 </a>
-                                <a href="https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                                    target="_blank"
-                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;">
+                                <a href="https://taskmanager-mdtanveer.netlify.app" target="_blank"
+                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;text-decoration:none;">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div style="padding:25px;">
-                        <h3 style="font-size:1.3rem;margin-bottom:10px;">Fitness Tracking App</h3>
-                        <p style="color:var(--text-secondary);">Mobile Development</p>
+                        <h3 style="font-size:1.3rem;margin-bottom:10px;">Task Management App</h3>
+                        <p style="color:var(--text-secondary);margin-bottom:15px;font-size:0.9rem;">Interactive task
+                            management application with drag-drop functionality and local storage.</p>
+                        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                            <span
+                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">React</span>
+                            <span
+                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">JavaScript</span>
+                            <span
+                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">CSS3</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-category="design"
-                    style="border-radius:12px;overflow:hidden;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;">
+                <!-- Project 3: REST API (Backend) -->
+                <div class="project-card" data-category="backend"
+                    style="border-radius:12px;overflow:hidden;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;"
+                    onmouseover="this.style.transform='translateY(-10px)';this.querySelector('.project-overlay').style.opacity='1';"
+                    onmouseout="this.style.transform='translateY(0)';this.querySelector('.project-overlay').style.opacity='0';">
                     <div
-                        style="height:200px;background:url('https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80') center/cover;position:relative;overflow:hidden;">
+                        style="height:200px;background:linear-gradient(135deg,#00b894,#00a085);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;">
+                        <div style="text-align:center;color:white;padding:20px;">
+                            <i class="fas fa-code" style="font-size:3rem;margin-bottom:15px;"></i>
+                            <h4 style="margin:0;font-size:1.2rem;">REST API</h4>
+                        </div>
                         <div class="project-overlay"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);display:flex;justify-content:center;align-items:center;opacity:0;transition:all 0.3s ease;">
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);display:flex;justify-content:center;align-items:center;opacity:0;transition:all 0.3s ease;">
                             <div style="display:flex;gap:15px;">
-                                <a href="https://github.com/mdtanveer0786" target="_blank" class="view-details"
-                                    data-project="3"
-                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;">
+                                <a href="https://github.com/mdtanveer0786/rest-api" target="_blank"
+                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;text-decoration:none;">
                                     <i class="fas fa-eye"></i>
                                 </a>
-                                <a href="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                                    target="_blank"
-                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;">
+                                <a href="https://api-mdtanveer.herokuapp.com" target="_blank"
+                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;text-decoration:none;">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div style="padding:25px;">
-                        <h3 style="font-size:1.3rem;margin-bottom:10px;">Brand Identity Design</h3>
-                        <p style="color:var(--text-secondary);">UI/UX Design</p>
+                        <h3 style="font-size:1.3rem;margin-bottom:10px;">REST API Service</h3>
+                        <p style="color:var(--text-secondary);margin-bottom:15px;font-size:0.9rem;">Secure RESTful API
+                            with JWT authentication, CRUD operations, and database integration.</p>
+                        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                            <span
+                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">Node.js</span>
+                            <span
+                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">Express</span>
+                            <span
+                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">MongoDB</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-category="web"
-                    style="border-radius:12px;overflow:hidden;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;">
+                <!-- Project 4: Weather App (Frontend) -->
+                <div class="project-card" data-category="frontend"
+                    style="border-radius:12px;overflow:hidden;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;"
+                    onmouseover="this.style.transform='translateY(-10px)';this.querySelector('.project-overlay').style.opacity='1';"
+                    onmouseout="this.style.transform='translateY(0)';this.querySelector('.project-overlay').style.opacity='0';">
                     <div
-                        style="height:200px;background:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80') center/cover;position:relative;overflow:hidden;">
+                        style="height:200px;background:linear-gradient(135deg,#74b9ff,#0984e3);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;">
+                        <div style="text-align:center;color:white;padding:20px;">
+                            <i class="fas fa-cloud-sun" style="font-size:3rem;margin-bottom:15px;"></i>
+                            <h4 style="margin:0;font-size:1.2rem;">Weather App</h4>
+                        </div>
                         <div class="project-overlay"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);display:flex;justify-content:center;align-items:center;opacity:0;transition:all 0.3s ease;">
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);display:flex;justify-content:center;align-items:center;opacity:0;transition:all 0.3s ease;">
                             <div style="display:flex;gap:15px;">
-                                <a href="https://github.com/mdtanveer0786" target="_blank" class="view-details"
-                                    data-project="4"
-                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;">
+                                <a href="https://github.com/mdtanveer0786/weather-app" target="_blank"
+                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;text-decoration:none;">
                                     <i class="fas fa-eye"></i>
                                 </a>
-                                <a href="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                                    target="_blank"
-                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;">
+                                <a href="https://weatherapp-mdtanveer.netlify.app" target="_blank"
+                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;text-decoration:none;">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div style="padding:25px;">
-                        <h3 style="font-size:1.3rem;margin-bottom:10px;">SaaS Dashboard</h3>
-                        <p style="color:var(--text-secondary);">Web Development</p>
+                        <h3 style="font-size:1.3rem;margin-bottom:10px;">Weather Application</h3>
+                        <p style="color:var(--text-secondary);margin-bottom:15px;font-size:0.9rem;">Real-time weather
+                            application with location detection and 5-day forecast.</p>
+                        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                            <span
+                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">JavaScript</span>
+                            <span
+                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">API</span>
+                            <span
+                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">CSS3</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div style="text-align:center;margin-top:50px;">
                 <a href="https://github.com/mdtanveer0786" target="_blank"
-                    style="display:inline-block;padding:12px 30px;background:transparent;color:var(--accent-color);border:2px solid var(--accent-color);border-radius:8px;font-weight:600;text-align:center;cursor:pointer;transition:all 0.3s ease;font-size:1rem; text-decoration:none;">View
-                    All Projects</a>
+                    style="display:inline-block;padding:12px 30px;background:transparent;color:var(--accent-color);border:2px solid var(--accent-color);border-radius:8px;font-weight:600;text-align:center;cursor:pointer;transition:all 0.3s ease;font-size:1rem; text-decoration:none;"
+                    onmouseover="this.style.background='var(--accent-color)';this.style.color='white';"
+                    onmouseout="this.style.background='transparent';this.style.color='var(--accent-color)';">View All
+                    Projects</a>
             </div>
         </div>
     </section>
+
+    <style>
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px var(--shadow-color);
+        }
+
+        .project-overlay {
+            opacity: 0;
+        }
+
+        .filter-btn:not(.active) {
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #3a86ff, #8338ec);
+            color: white;
+        }
+    </style>
 
     <!-- Contact Section -->
     <section id="contact" style="padding:100px 0;background:linear-gradient(135deg,#3a86ff,#8338ec);color:white;">
@@ -771,16 +1095,16 @@
             <div style="text-align:center;margin-bottom:60px;">
                 <h2 style="font-size:2.5rem;margin-bottom:15px;font-weight:700;">Get In Touch</h2>
                 <p style="font-size:1.2rem;max-width:600px;margin:0 auto;opacity:0.9;color:white;">Let's work together
-                    to bring your
-                    ideas to life</p>
+                    to bring your ideas to life</p>
             </div>
 
-            <div style="display:flex;gap:60px;flex-wrap:wrap;">
+            <div style="display:flex;gap:60px;flex-wrap:wrap;align-items:flex-start;">
+                <!-- Contact Information -->
                 <div style="flex:1;min-width:300px;">
                     <h3 style="margin-bottom:30px;font-size:1.8rem;">Contact Information</h3>
                     <div style="display:flex;align-items:center;gap:15px;margin-bottom:25px;">
                         <div
-                            style="width:50px;height:50px;background:rgba(130, 124, 124, 0.955);border-radius:50%;display:flex;justify-content:center;align-items:center;font-size:1.2rem;">
+                            style="width:50px;height:50px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;justify-content:center;align-items:center;font-size:1.2rem;">
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div>
@@ -794,7 +1118,7 @@
 
                     <div style="display:flex;align-items:center;gap:15px;margin-bottom:25px;">
                         <div
-                            style="width:50px;height:50px;background:rgba(110, 105, 105, 0.921);border-radius:50%;display:flex;justify-content:center;align-items:center;font-size:1.2rem;">
+                            style="width:50px;height:50px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;justify-content:center;align-items:center;font-size:1.2rem;">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div>
@@ -805,7 +1129,7 @@
 
                     <div style="display:flex;align-items:center;gap:15px;margin-bottom:25px;">
                         <div
-                            style="width:50px;height:50px;background:rgba(115, 106, 106, 0.953);border-radius:50%;display:flex;justify-content:center;align-items:center;font-size:1.2rem;">
+                            style="width:50px;height:50px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;justify-content:center;align-items:center;font-size:1.2rem;">
                             <i class="fas fa-phone"></i>
                         </div>
                         <div>
@@ -816,24 +1140,26 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Contact Form -->
                 <div style="flex:1;min-width:300px;display:flex;justify-content:center;">
                     <form id="contact-form"
-                        style="background:white;padding:40px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.1);width:100%;max-width:500px;">
-                        <div style="margin-bottom:20px; ">
+                        style="background:white;padding:40px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.1);width:100%;max-width:500px;color:#333;">
+                        <div style="margin-bottom:20px;">
                             <input type="text" id="name" placeholder="Your Name"
-                                style="width:100%;padding:15px;border:1px solid var(--bg-tertiary);border-radius:8px;font-size:1rem;transition:all 0.3s ease;">
+                                style="width:100%;padding:15px;border:1px solid #ddd;border-radius:8px;font-size:1rem;transition:all 0.3s ease;box-sizing:border-box;">
                         </div>
                         <div style="margin-bottom:20px;">
                             <input type="email" id="email" placeholder="Your Email"
-                                style="width:100%;padding:15px;border:1px solid var(--bg-tertiary);border-radius:8px;font-size:1rem;transition:all 0.3s ease;">
+                                style="width:100%;padding:15px;border:1px solid #ddd;border-radius:8px;font-size:1rem;transition:all 0.3s ease;box-sizing:border-box;">
                         </div>
                         <div style="margin-bottom:20px;">
                             <input type="text" id="subject" placeholder="Subject"
-                                style="width:100%;padding:15px;border:1px solid var(--bg-tertiary);border-radius:8px;font-size:1rem;transition:all 0.3s ease;">
+                                style="width:100%;padding:15px;border:1px solid #ddd;border-radius:8px;font-size:1rem;transition:all 0.3s ease;box-sizing:border-box;">
                         </div>
                         <div style="margin-bottom:25px;">
                             <textarea id="message" placeholder="Your Message" rows="5"
-                                style="width:100%;padding:15px;border:1px solid var(--bg-tertiary);border-radius:8px;font-size:1rem;transition:all 0.3s ease;resize:vertical;"></textarea>
+                                style="width:100%;padding:15px;border:1px solid #ddd;border-radius:8px;font-size:1rem;transition:all 0.3s ease;resize:vertical;box-sizing:border-box;font-family:inherit;"></textarea>
                         </div>
                         <button type="submit"
                             style="width:100%;padding:15px;background:linear-gradient(135deg,#3a86ff,#8338ec);color:white;border:none;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:all 0.3s ease;">Send
@@ -845,74 +1171,211 @@
     </section>
 
     <!-- Footer -->
-    <footer style="background:#1a1a2e;color:white;padding:60px 0 30px;">
+    <footer style="background:#1a1a2e;color:white;padding:80px 0 30px;">
         <div style="max-width:1200px;margin:0 auto;padding:0 20px;">
             <div
-                style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:30px;margin-bottom:40px;">
-                <div>
-                    <h3 style="font-size:1.8rem;margin-bottom:15px;color:#3a86ff;">Md Tanveer Alam</h3>
-                    <p style="color:#adb5bd;max-width:400px;">Full Stack Developer creating complex web applications and
-                        mobile solutions using modern technologies.</p>
+                style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:40px;margin-bottom:50px;">
+                <!-- Brand Section -->
+                <div style="flex:1;min-width:300px;">
+                    <h3 style="font-size:2rem;margin-bottom:20px;color:#3a86ff;font-weight:700;">Md Tanveer Alam</h3>
+                    <p style="color:#adb5bd;max-width:400px;line-height:1.6;margin-bottom:25px;font-size:1.1rem;">
+                        Passionate Full Stack Developer crafting digital experiences with modern technologies.
+                        Let's build something amazing together!
+                    </p>
+                    <div style="display:flex;align-items:center;gap:15px;">
+                        <div style="display:flex;align-items:center;gap:8px;color:#adb5bd;">
+                            <i class="fas fa-envelope" style="color:#3a86ff;"></i>
+                            <span>mdtanweeralam0002@gmail.com</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div>
-                    <h4 style="margin-bottom:15px;">Quick Links</h4>
+                <!-- Quick Links -->
+                <div style="min-width:200px;">
+                    <h4 style="margin-bottom:20px;font-size:1.3rem;color:white;font-weight:600;">Quick Links</h4>
                     <ul style="list-style:none;padding:0;">
-                        <li style="margin-bottom:8px;">
+                        <li style="margin-bottom:12px;">
                             <a href="#hero"
-                                style="color:#adb5bd;transition:all 0.3s ease;text-decoration:none;display:flex;align-items:center;gap:8px;">
-                                <i class="fas fa-home" style="width:16px;"></i>
+                                style="color:#adb5bd;transition:all 0.3s ease;text-decoration:none;display:flex;align-items:center;gap:12px;padding:8px 0;"
+                                onmouseover="this.style.color='#3a86ff';this.style.transform='translateX(5px)';"
+                                onmouseout="this.style.color='#adb5bd';this.style.transform='translateX(0)';">
+                                <i class="fas fa-chevron-right" style="width:16px;color:#3a86ff;font-size:0.8rem;"></i>
                                 Home
                             </a>
                         </li>
-                        <li style="margin-bottom:8px;">
+                        <li style="margin-bottom:12px;">
                             <a href="#about"
-                                style="color:#adb5bd;transition:all 0.3s ease;text-decoration:none;display:flex;align-items:center;gap:8px;">
-                                <i class="fas fa-user" style="width:16px;"></i>
+                                style="color:#adb5bd;transition:all 0.3s ease;text-decoration:none;display:flex;align-items:center;gap:12px;padding:8px 0;"
+                                onmouseover="this.style.color='#3a86ff';this.style.transform='translateX(5px)';"
+                                onmouseout="this.style.color='#adb5bd';this.style.transform='translateX(0)';">
+                                <i class="fas fa-chevron-right" style="width:16px;color:#3a86ff;font-size:0.8rem;"></i>
                                 About
                             </a>
                         </li>
-                        <li style="margin-bottom:8px;">
+                        <li style="margin-bottom:12px;">
+                            <a href="#education"
+                                style="color:#adb5bd;transition:all 0.3s ease;text-decoration:none;display:flex;align-items:center;gap:12px;padding:8px 0;"
+                                onmouseover="this.style.color='#3a86ff';this.style.transform='translateX(5px)';"
+                                onmouseout="this.style.color='#adb5bd';this.style.transform='translateX(0)';">
+                                <i class="fas fa-chevron-right" style="width:16px;color:#3a86ff;font-size:0.8rem;"></i>
+                                Education
+                            </a>
+                        </li>
+                        <li style="margin-bottom:12px;">
                             <a href="#projects"
-                                style="color:#adb5bd;transition:all 0.3s ease;text-decoration:none;display:flex;align-items:center;gap:8px;">
-                                <i class="fas fa-briefcase" style="width:16px;"></i>
+                                style="color:#adb5bd;transition:all 0.3s ease;text-decoration:none;display:flex;align-items:center;gap:12px;padding:8px 0;"
+                                onmouseover="this.style.color='#3a86ff';this.style.transform='translateX(5px)';"
+                                onmouseout="this.style.color='#adb5bd';this.style.transform='translateX(0)';">
+                                <i class="fas fa-chevron-right" style="width:16px;color:#3a86ff;font-size:0.8rem;"></i>
                                 Projects
                             </a>
                         </li>
-                        <li style="margin-bottom:8px;">
+                        <li style="margin-bottom:12px;">
                             <a href="#contact"
-                                style="color:#adb5bd;transition:all 0.3s ease;text-decoration:none;display:flex;align-items:center;gap:8px;">
-                                <i class="fas fa-envelope" style="width:16px;"></i>
+                                style="color:#adb5bd;transition:all 0.3s ease;text-decoration:none;display:flex;align-items:center;gap:12px;padding:8px 0;"
+                                onmouseover="this.style.color='#3a86ff';this.style.transform='translateX(5px)';"
+                                onmouseout="this.style.color='#adb5bd';this.style.transform='translateX(0)';">
+                                <i class="fas fa-chevron-right" style="width:16px;color:#3a86ff;font-size:0.8rem;"></i>
                                 Contact
                             </a>
                         </li>
                     </ul>
                 </div>
 
-                <div>
-                    <h4 style="margin-bottom:15px;">Connect With Me</h4>
-                    <div style="display:flex;gap:15px;">
+                <!-- Services -->
+                <div style="min-width:200px;">
+                    <h4 style="margin-bottom:20px;font-size:1.3rem;color:white;font-weight:600;">Services</h4>
+                    <ul style="list-style:none;padding:0;">
+                        <li style="margin-bottom:12px;">
+                            <span style="color:#adb5bd;display:flex;align-items:center;gap:10px;">
+                                <i class="fas fa-code" style="color:#3a86ff;font-size:0.9rem;"></i>
+                                Frontend Development
+                            </span>
+                        </li>
+                        <li style="margin-bottom:12px;">
+                            <span style="color:#adb5bd;display:flex;align-items:center;gap:10px;">
+                                <i class="fas fa-server" style="color:#3a86ff;font-size:0.9rem;"></i>
+                                Backend Development
+                            </span>
+                        </li>
+                        <li style="margin-bottom:12px;">
+                            <span style="color:#adb5bd;display:flex;align-items:center;gap:10px;">
+                                <i class="fas fa-database" style="color:#3a86ff;font-size:0.9rem;"></i>
+                                Database Management
+                            </span>
+                        </li>
+                        <li style="margin-bottom:12px;">
+                            <span style="color:#adb5bd;display:flex;align-items:center;gap:10px;">
+                                <i class="fas fa-mobile-alt" style="color:#3a86ff;font-size:0.9rem;"></i>
+                                Full Stack Solutions
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Connect Section -->
+                <div style="min-width:250px;">
+                    <h4 style="margin-bottom:20px;font-size:1.3rem;color:white;font-weight:600;">Let's Connect</h4>
+                    <p style="color:#adb5bd;margin-bottom:25px;line-height:1.6;">
+                        Interested in working together? Let's discuss your project and bring your ideas to life.
+                    </p>
+
+                    <div style="display:flex;gap:12px;margin-bottom:30px;">
                         <a href="https://www.linkedin.com/in/md-tanveer-alam-b7a134219/" target="_blank"
-                            style="width:40px;height:40px;background:#3a86ff;border-radius:50%;display:flex;justify-content:center;align-items:center;color:white;font-size:1.2rem; text-decoration:none; ">
+                            style="width:45px;height:45px;background:linear-gradient(135deg,#3a86ff,#8338ec);border-radius:50%;display:flex;justify-content:center;align-items:center;color:white;font-size:1.1rem;text-decoration:none;transition:all 0.3s ease;"
+                            onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 5px 15px rgba(58,134,255,0.4)';"
+                            onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                         <a href="https://github.com/mdtanveer0786" target="_blank"
-                            style="width:40px;height:40px;background:#3a86ff;border-radius:50%;display:flex;justify-content:center;align-items:center;color:white;font-size:1.2rem; text-decoration:none; ">
+                            style="width:45px;height:45px;background:linear-gradient(135deg,#3a86ff,#8338ec);border-radius:50%;display:flex;justify-content:center;align-items:center;color:white;font-size:1.1rem;text-decoration:none;transition:all 0.3s ease;"
+                            onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 5px 15px rgba(58,134,255,0.4)';"
+                            onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
                             <i class="fab fa-github"></i>
                         </a>
                         <a href="https://x.com/tanveertoofan01" target="_blank"
-                            style="width:40px;height:40px;background:#3a86ff;border-radius:50%;display:flex;justify-content:center;align-items:center;color:white;font-size:1.2rem; text-decoration:none; ">
+                            style="width:45px;height:45px;background:linear-gradient(135deg,#3a86ff,#8338ec);border-radius:50%;display:flex;justify-content:center;align-items:center;color:white;font-size:1.1rem;text-decoration:none;transition:all 0.3s ease;"
+                            onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 5px 15px rgba(58,134,255,0.4)';"
+                            onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
                             <i class="fab fa-twitter"></i>
                         </a>
+                        <a href="mailto:mdtanweeralam0002@gmail.com"
+                            style="width:45px;height:45px;background:linear-gradient(135deg,#3a86ff,#8338ec);border-radius:50%;display:flex;justify-content:center;align-items:center;color:white;font-size:1.1rem;text-decoration:none;transition:all 0.3s ease;"
+                            onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 5px 15px rgba(58,134,255,0.4)';"
+                            onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
+
+                    <!-- Call to Action -->
+                    <a href="#contact"
+                        style="display:inline-flex;align-items:center;gap:10px;padding:12px 25px;background:transparent;color:#3a86ff;border:2px solid #3a86ff;border-radius:8px;font-weight:600;text-decoration:none;transition:all 0.3s ease;font-size:0.9rem;"
+                        onmouseover="this.style.background='#3a86ff';this.style.color='white';this.style.transform='translateY(-2px)';"
+                        onmouseout="this.style.background='transparent';this.style.color='#3a86ff';this.style.transform='translateY(0)';">
+                        <i class="fas fa-paper-plane"></i>
+                        Start a Project
+                    </a>
                 </div>
             </div>
 
-            <div style="border-top:1px solid #343a40;padding-top:30px;text-align:center;color:#adb5bd;">
-                <p>&copy; 2025 Md Tanveer Alam. All Rights Reserved.</p>
+            <!-- Bottom Bar -->
+            <div style="border-top:1px solid #343a40;padding-top:30px;">
+                <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
+                    <div style="color:#adb5bd;">
+                        <p style="margin:0;font-size:0.9rem;">&copy; 2025 Md Tanveer Alam. All Rights Reserved.</p>
+                    </div>
+
+                    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+                        <span style="color:#adb5bd;font-size:0.9rem;">Crafted with</span>
+                        <i class="fas fa-heart" style="color:#e74c3c;font-size:0.9rem;"></i>
+                        <span style="color:#adb5bd;font-size:0.9rem;">by</span>
+                        <a href="#hero"
+                            style="color:#3a86ff;text-decoration:none;font-weight:700;transition:all 0.3s ease;"
+                            onmouseover="this.style.color='#8338ec';this.style.textShadow='0 0 10px rgba(131,56,236,0.3)';"
+                            onmouseout="this.style.color='#3a86ff';this.style.textShadow='none';">
+                            Md Tanveer Alam
+                        </a>
+                        <span style="color:#adb5bd;font-size:0.9rem;">•</span>
+                        <a href="https://github.com/mdtanveer0786" target="_blank"
+                            style="color:#adb5bd;text-decoration:none;transition:all 0.3s ease;font-size:0.9rem;"
+                            onmouseover="this.style.color='#3a86ff';">
+                            View GitHub
+                        </a>
+                    </div>
+
+                    <div style="color:#adb5bd;font-size:0.9rem;">
+                        <span>Made in India</span>
+                        <span style="margin:0 8px;">•</span>
+                        <span>Delhi</span>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
+
+    <style>
+        /* Mobile Responsive Footer */
+        @media (max-width: 768px) {
+            footer {
+                padding: 60px 0 25px !important;
+            }
+
+            .footer-content {
+                flex-direction: column !important;
+                gap: 30px !important;
+            }
+
+            .footer-section {
+                min-width: 100% !important;
+            }
+
+            .footer-bottom {
+                flex-direction: column !important;
+                text-align: center !important;
+                gap: 15px !important;
+            }
+        }
+    </style>
 
     <!-- Project Modal -->
     <div id="project-modal"
@@ -1029,7 +1492,7 @@
                         icon.classList.add('fa-bars');
                     });
                 });
-            
+
                 // Show/hide mobile menu button based on screen size
                 function handleResize() {
                     if (window.innerWidth <= 768) {
@@ -1123,7 +1586,7 @@
             });
         }
 
-        // Project Filter
+        // Project Filter - UPDATED VERSION
         function initProjectFilter() {
             const filterButtons = document.querySelectorAll('.filter-btn');
             const projectCards = document.querySelectorAll('.project-card');
@@ -1147,9 +1610,15 @@
 
                     const filterValue = this.getAttribute('data-filter');
 
-                    // Filter projects
+                    // Filter projects - UPDATED LOGIC
                     projectCards.forEach(card => {
-                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        const category = card.getAttribute('data-category');
+
+                        if (filterValue === 'all' ||
+                            (filterValue === 'frontend' && category === 'frontend') ||
+                            (filterValue === 'backend' && category === 'backend') ||
+                            (filterValue === 'fullstack' && category === 'fullstack')) {
+
                             card.style.display = 'block';
                             setTimeout(() => {
                                 card.style.opacity = '1';
@@ -1166,7 +1635,6 @@
                 });
             });
         }
-
         // Project Modals
         function initProjectModals() {
             const modal = document.getElementById('project-modal');
@@ -1175,46 +1643,45 @@
 
             if (!modal) return;
 
-            // Project data
+            // Updated Project data
             const projects = {
                 1: {
                     title: "E-commerce Platform",
-                    category: "Web Development",
-                    description: "A fully responsive e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product catalog, shopping cart, payment integration, and admin dashboard.",
-                    technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe API"],
+                    category: "Full Stack Development",
+                    description: "A complete e-commerce solution with user authentication, product management, shopping cart, and payment integration. Features include admin dashboard, order tracking, and responsive design.",
+                    technologies: ["React", "Node.js", "MongoDB", "Express", "JWT", "REST API"],
                     image: "#",
-                    liveUrl: "#",
-                    githubUrl: "https://github.com/mdtanveer0786"
+                    liveUrl: "https://ecommerce-demo-mdtanveer.netlify.app",
+                    githubUrl: "https://github.com/mdtanveer0786/ecommerce-platform"
                 },
                 2: {
-                    title: "Fitness Tracking App",
-                    category: "Mobile Development",
-                    description: "A cross-platform mobile application for tracking workouts, nutrition, and progress. Includes social features, personalized recommendations, and integration with wearable devices.",
-                    technologies: ["React Native", "Firebase", "Redux", "Chart.js"],
+                    title: "Task Management App",
+                    category: "Frontend Development",
+                    description: "Interactive task management application with drag-drop functionality, local storage, and real-time updates. Features include task categories, due dates, and progress tracking.",
+                    technologies: ["React", "JavaScript", "CSS3", "Local Storage", "Context API"],
                     image: "#",
-                    liveUrl: "#",
-                    githubUrl: "https://github.com/mdtanveer0786"
+                    liveUrl: "https://taskmanager-mdtanveer.netlify.app",
+                    githubUrl: "https://github.com/mdtanveer0786/task-manager"
                 },
                 3: {
-                    title: "Brand Identity Design",
-                    category: "UI/UX Design",
-                    description: "Complete brand identity design including logo, color palette, typography, and brand guidelines for a modern tech startup.",
-                    technologies: ["Figma", "Adobe Illustrator", "Photoshop", "InVision"],
+                    title: "REST API Service",
+                    category: "Backend Development",
+                    description: "Secure RESTful API with JWT authentication, CRUD operations, and database integration. Includes user management, data validation, and error handling.",
+                    technologies: ["Node.js", "Express", "MongoDB", "JWT", "Mongoose", "REST"],
                     image: "#",
-                    liveUrl: "#",
-                    githubUrl: "https://github.com/mdtanveer0786"
+                    liveUrl: "https://api-mdtanveer.herokuapp.com",
+                    githubUrl: "https://github.com/mdtanveer0786/rest-api"
                 },
                 4: {
-                    title: "SaaS Dashboard",
-                    category: "Web Development",
-                    description: "A comprehensive SaaS dashboard for analytics and business intelligence with real-time data visualization and reporting features.",
-                    technologies: ["Vue.js", "D3.js", "Node.js", "PostgreSQL", "AWS"],
+                    title: "Weather Application",
+                    category: "Frontend Development",
+                    description: "Real-time weather application with location detection, 5-day forecast, and interactive UI. Features include temperature units conversion and weather icons.",
+                    technologies: ["JavaScript", "Weather API", "CSS3", "HTML5", "Async/Await"],
                     image: "#",
-                    liveUrl: "#",
-                    githubUrl: "https://github.com/mdtanveer0786"
+                    liveUrl: "https://weatherapp-mdtanveer.netlify.app",
+                    githubUrl: "https://github.com/mdtanveer0786/weather-app"
                 }
             };
-
             // Open modal when view details is clicked - REMOVED FOR EYE ICONS
             // Now eye icons will directly go to GitHub via href
             viewDetailsButtons.forEach(button => {
