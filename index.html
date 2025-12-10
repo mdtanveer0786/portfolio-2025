@@ -233,7 +233,7 @@
                             style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;color:inherit;">About</a>
                     </li>
                     <li><a href="#education" class="nav-link"
-                            style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;color:inherit;">Eduction</a>
+                            style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;color:inherit;">Education</a>
                     </li>
                     <li><a href="#tech-stack" class="nav-link"
                             style="font-weight:600;padding:5px 10px;border-radius:4px;transition:all 0.3s ease;text-decoration:none;color:inherit;">Skills</a>
@@ -876,219 +876,502 @@
     <section id="projects" style="padding:100px 0;background-color:var(--bg-primary);">
         <div style="max-width:1200px;margin:0 auto;padding:0 20px;">
             <div style="text-align:center;margin-bottom:60px;">
-                <h2 style="font-size:2.5rem;margin-bottom:15px;font-weight:700;">Featured Projects</h2>
+                <h2 style="font-size:2.5rem;margin-bottom:15px;font-weight:700;color:var(--text-primary);">Featured
+                    Projects</h2>
                 <p style="font-size:1.2rem;color:var(--text-secondary);max-width:600px;margin:0 auto;">A selection of my
                     recent work</p>
             </div>
 
+            <!-- Project Filter Buttons -->
             <div style="display:flex;justify-content:center;gap:15px;margin-bottom:40px;flex-wrap:wrap;">
                 <button class="filter-btn active" data-filter="all"
-                    style="padding:10px 20px;background:linear-gradient(135deg,#3a86ff,#8338ec);color:white;border:none;border-radius:6px;cursor:pointer;font-weight:600;transition:all 0.3s ease;">All</button>
+                    style="padding:10px 20px;background:linear-gradient(135deg,#3a86ff,#8338ec);color:white;border:none;border-radius:6px;cursor:pointer;font-weight:600;transition:all 0.3s ease;user-select:none;-webkit-user-select:none;">All</button>
                 <button class="filter-btn" data-filter="frontend"
-                    style="padding:10px 20px;border:none;border-radius:6px;cursor:pointer;font-weight:600;transition:all 0.3s ease;">Frontend</button>
+                    style="padding:10px 20px;background:var(--bg-tertiary);color:var(--text-secondary);border:none;border-radius:6px;cursor:pointer;font-weight:600;transition:all 0.3s ease;user-select:none;-webkit-user-select:none;">Frontend</button>
                 <button class="filter-btn" data-filter="backend"
-                    style="padding:10px 20px;border:none;border-radius:6px;cursor:pointer;font-weight:600;transition:all 0.3s ease;">Backend</button>
+                    style="padding:10px 20px;background:var(--bg-tertiary);color:var(--text-secondary);border:none;border-radius:6px;cursor:pointer;font-weight:600;transition:all 0.3s ease;user-select:none;-webkit-user-select:none;">Backend</button>
                 <button class="filter-btn" data-filter="fullstack"
-                    style="padding:10px 20px;border:none;border-radius:6px;cursor:pointer;font-weight:600;transition:all 0.3s ease;">Full
+                    style="padding:10px 20px;background:var(--bg-tertiary);color:var(--text-secondary);border:none;border-radius:6px;cursor:pointer;font-weight:600;transition:all 0.3s ease;user-select:none;-webkit-user-select:none;">Full
                     Stack</button>
             </div>
 
-            <div class="projects-grid"
-                style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:30px;">
+            <!-- Projects Grid -->
+            <div class="projects-grid" id="projectsGrid"
+                style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:30px;">
 
                 <!-- Project 1: E-commerce Platform (Full Stack) -->
                 <div class="project-card" data-category="fullstack"
-                    style="border-radius:12px;overflow:hidden;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;"
-                    onmouseover="this.style.transform='translateY(-10px)';this.querySelector('.project-overlay').style.opacity='1';"
-                    onmouseout="this.style.transform='translateY(0)';this.querySelector('.project-overlay').style.opacity='0';">
+                    style="border-radius:12px;overflow:hidden;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;background:var(--card-bg);user-select:none;-webkit-user-select:none;"
+                    onmouseover="this.style.transform='translateY(-10px)';"
+                    onmouseout="this.style.transform='translateY(0)';">
                     <div
                         style="height:200px;background:linear-gradient(135deg,#3a86ff,#8338ec);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;">
                         <div style="text-align:center;color:white;padding:20px;">
                             <i class="fas fa-shopping-cart" style="font-size:3rem;margin-bottom:15px;"></i>
-                            <h4 style="margin:0;font-size:1.2rem;">E-commerce Platform</h4>
-                        </div>
-                        <div class="project-overlay"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);display:flex;justify-content:center;align-items:center;opacity:0;transition:all 0.3s ease;">
-                            <div style="display:flex;gap:15px;">
-                                <a href="https://github.com/mdtanveer0786/ecommerce-platform" target="_blank"
-                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;text-decoration:none;">
-                                    <i class="fas fa-eye"></i>
-                                </a>
-                                <a href="https://ecommerce-demo-mdtanveer.netlify.app" target="_blank"
-                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;text-decoration:none;">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
+                            <h4 style="margin:0;font-size:1.2rem;font-weight:600;">E-commerce Platform</h4>
                         </div>
                     </div>
                     <div style="padding:25px;">
-                        <h3 style="font-size:1.3rem;margin-bottom:10px;">E-commerce Platform</h3>
-                        <p style="color:var(--text-secondary);margin-bottom:15px;font-size:0.9rem;">Full-stack
+                        <h3 style="font-size:1.3rem;margin-bottom:10px;color:var(--text-primary);">E-commerce Platform
+                        </h3>
+                        <p style="color:var(--text-secondary);margin-bottom:20px;font-size:0.95rem;line-height:1.6;">
+                            Full-stack
                             e-commerce solution with user authentication, product management, and payment integration.
                         </p>
-                        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+
+                        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;">
                             <span
-                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">React</span>
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);font-weight:500;">React</span>
                             <span
-                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">Node.js</span>
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);font-weight:500;">Node.js</span>
                             <span
-                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">MongoDB</span>
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);font-weight:500;">MongoDB</span>
+                        </div>
+
+                        <!-- Action Buttons - Clean Design -->
+                        <div style="display:flex;gap:12px;margin-top:15px;">
+                            <a href="https://github.com/mdtanveer0786/ecommerce-platform" target="_blank"
+                                style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 15px;background:var(--bg-tertiary);color:var(--text-primary);border-radius:8px;font-weight:500;text-decoration:none;font-size:0.9rem;transition:all 0.3s ease;border:none;user-select:none;-webkit-user-select:none;"
+                                onmouseover="this.style.background='var(--accent-color)';this.style.color='white';this.style.transform='translateY(-2px)';"
+                                onmouseout="this.style.background='var(--bg-tertiary)';this.style.color='var(--text-primary)';this.style.transform='translateY(0)';">
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="https://ecommerce-demo-mdtanveer.netlify.app" target="_blank"
+                                style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 15px;background:linear-gradient(135deg,#3a86ff,#8338ec);color:white;border-radius:8px;font-weight:500;text-decoration:none;font-size:0.9rem;transition:all 0.3s ease;user-select:none;-webkit-user-select:none;"
+                                onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 5px 15px rgba(58,134,255,0.3)';"
+                                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Demo</span>
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2: Task Management App (Frontend) -->
                 <div class="project-card" data-category="frontend"
-                    style="border-radius:12px;overflow:hidden;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;"
-                    onmouseover="this.style.transform='translateY(-10px)';this.querySelector('.project-overlay').style.opacity='1';"
-                    onmouseout="this.style.transform='translateY(0)';this.querySelector('.project-overlay').style.opacity='0';">
+                    style="border-radius:12px;overflow:hidden;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;background:var(--card-bg);user-select:none;-webkit-user-select:none;"
+                    onmouseover="this.style.transform='translateY(-10px)';"
+                    onmouseout="this.style.transform='translateY(0)';">
                     <div
                         style="height:200px;background:linear-gradient(135deg,#ff6b6b,#ee5a24);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;">
                         <div style="text-align:center;color:white;padding:20px;">
                             <i class="fas fa-tasks" style="font-size:3rem;margin-bottom:15px;"></i>
-                            <h4 style="margin:0;font-size:1.2rem;">Task Manager</h4>
-                        </div>
-                        <div class="project-overlay"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);display:flex;justify-content:center;align-items:center;opacity:0;transition:all 0.3s ease;">
-                            <div style="display:flex;gap:15px;">
-                                <a href="https://github.com/mdtanveer0786/task-manager" target="_blank"
-                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;text-decoration:none;">
-                                    <i class="fas fa-eye"></i>
-                                </a>
-                                <a href="https://taskmanager-mdtanveer.netlify.app" target="_blank"
-                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;text-decoration:none;">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
+                            <h4 style="margin:0;font-size:1.2rem;font-weight:600;">Task Manager</h4>
                         </div>
                     </div>
                     <div style="padding:25px;">
-                        <h3 style="font-size:1.3rem;margin-bottom:10px;">Task Management App</h3>
-                        <p style="color:var(--text-secondary);margin-bottom:15px;font-size:0.9rem;">Interactive task
+                        <h3 style="font-size:1.3rem;margin-bottom:10px;color:var(--text-primary);">Task Management App
+                        </h3>
+                        <p style="color:var(--text-secondary);margin-bottom:20px;font-size:0.95rem;line-height:1.6;">
+                            Interactive task
                             management application with drag-drop functionality and local storage.</p>
-                        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+
+                        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;">
                             <span
-                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">React</span>
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);font-weight:500;">React</span>
                             <span
-                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">JavaScript</span>
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);font-weight:500;">JavaScript</span>
                             <span
-                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">CSS3</span>
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);font-weight:500;">CSS3</span>
+                        </div>
+
+                        <!-- Action Buttons - Clean Design -->
+                        <div style="display:flex;gap:12px;margin-top:15px;">
+                            <a href="https://github.com/mdtanveer0786/task-manager" target="_blank"
+                                style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 15px;background:var(--bg-tertiary);color:var(--text-primary);border-radius:8px;font-weight:500;text-decoration:none;font-size:0.9rem;transition:all 0.3s ease;border:none;user-select:none;-webkit-user-select:none;"
+                                onmouseover="this.style.background='var(--accent-color)';this.style.color='white';this.style.transform='translateY(-2px)';"
+                                onmouseout="this.style.background='var(--bg-tertiary)';this.style.color='var(--text-primary)';this.style.transform='translateY(0)';">
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="https://taskmanager-mdtanveer.netlify.app" target="_blank"
+                                style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 15px;background:linear-gradient(135deg,#3a86ff,#8338ec);color:white;border-radius:8px;font-weight:500;text-decoration:none;font-size:0.9rem;transition:all 0.3s ease;user-select:none;-webkit-user-select:none;"
+                                onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 5px 15px rgba(58,134,255,0.3)';"
+                                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Demo</span>
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 3: REST API (Backend) -->
                 <div class="project-card" data-category="backend"
-                    style="border-radius:12px;overflow:hidden;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;"
-                    onmouseover="this.style.transform='translateY(-10px)';this.querySelector('.project-overlay').style.opacity='1';"
-                    onmouseout="this.style.transform='translateY(0)';this.querySelector('.project-overlay').style.opacity='0';">
+                    style="border-radius:12px;overflow:hidden;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;background:var(--card-bg);user-select:none;-webkit-user-select:none;"
+                    onmouseover="this.style.transform='translateY(-10px)';"
+                    onmouseout="this.style.transform='translateY(0)';">
                     <div
                         style="height:200px;background:linear-gradient(135deg,#00b894,#00a085);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;">
                         <div style="text-align:center;color:white;padding:20px;">
                             <i class="fas fa-code" style="font-size:3rem;margin-bottom:15px;"></i>
-                            <h4 style="margin:0;font-size:1.2rem;">REST API</h4>
-                        </div>
-                        <div class="project-overlay"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);display:flex;justify-content:center;align-items:center;opacity:0;transition:all 0.3s ease;">
-                            <div style="display:flex;gap:15px;">
-                                <a href="https://github.com/mdtanveer0786/rest-api" target="_blank"
-                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;text-decoration:none;">
-                                    <i class="fas fa-eye"></i>
-                                </a>
-                                <a href="https://api-mdtanveer.herokuapp.com" target="_blank"
-                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;text-decoration:none;">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
+                            <h4 style="margin:0;font-size:1.2rem;font-weight:600;">REST API</h4>
                         </div>
                     </div>
                     <div style="padding:25px;">
-                        <h3 style="font-size:1.3rem;margin-bottom:10px;">REST API Service</h3>
-                        <p style="color:var(--text-secondary);margin-bottom:15px;font-size:0.9rem;">Secure RESTful API
+                        <h3 style="font-size:1.3rem;margin-bottom:10px;color:var(--text-primary);">REST API Service</h3>
+                        <p style="color:var(--text-secondary);margin-bottom:20px;font-size:0.95rem;line-height:1.6;">
+                            Secure RESTful API
                             with JWT authentication, CRUD operations, and database integration.</p>
-                        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+
+                        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;">
                             <span
-                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">Node.js</span>
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);font-weight:500;">Node.js</span>
                             <span
-                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">Express</span>
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);font-weight:500;">Express</span>
                             <span
-                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">MongoDB</span>
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);font-weight:500;">MongoDB</span>
+                        </div>
+
+                        <!-- Action Buttons - Clean Design -->
+                        <div style="display:flex;gap:12px;margin-top:15px;">
+                            <a href="https://github.com/mdtanveer0786/rest-api" target="_blank"
+                                style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 15px;background:var(--bg-tertiary);color:var(--text-primary);border-radius:8px;font-weight:500;text-decoration:none;font-size:0.9rem;transition:all 0.3s ease;border:none;user-select:none;-webkit-user-select:none;"
+                                onmouseover="this.style.background='var(--accent-color)';this.style.color='white';this.style.transform='translateY(-2px)';"
+                                onmouseout="this.style.background='var(--bg-tertiary)';this.style.color='var(--text-primary)';this.style.transform='translateY(0)';">
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="https://api-mdtanveer.herokuapp.com" target="_blank"
+                                style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 15px;background:linear-gradient(135deg,#3a86ff,#8338ec);color:white;border-radius:8px;font-weight:500;text-decoration:none;font-size:0.9rem;transition:all 0.3s ease;user-select:none;-webkit-user-select:none;"
+                                onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 5px 15px rgba(58,134,255,0.3)';"
+                                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Demo</span>
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 4: Weather App (Frontend) -->
                 <div class="project-card" data-category="frontend"
-                    style="border-radius:12px;overflow:hidden;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;"
-                    onmouseover="this.style.transform='translateY(-10px)';this.querySelector('.project-overlay').style.opacity='1';"
-                    onmouseout="this.style.transform='translateY(0)';this.querySelector('.project-overlay').style.opacity='0';">
+                    style="border-radius:12px;overflow:hidden;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;background:var(--card-bg);user-select:none;-webkit-user-select:none;"
+                    onmouseover="this.style.transform='translateY(-10px)';"
+                    onmouseout="this.style.transform='translateY(0)';">
                     <div
                         style="height:200px;background:linear-gradient(135deg,#74b9ff,#0984e3);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;">
                         <div style="text-align:center;color:white;padding:20px;">
                             <i class="fas fa-cloud-sun" style="font-size:3rem;margin-bottom:15px;"></i>
-                            <h4 style="margin:0;font-size:1.2rem;">Weather App</h4>
-                        </div>
-                        <div class="project-overlay"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);display:flex;justify-content:center;align-items:center;opacity:0;transition:all 0.3s ease;">
-                            <div style="display:flex;gap:15px;">
-                                <a href="https://github.com/mdtanveer0786/weather-app" target="_blank"
-                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;text-decoration:none;">
-                                    <i class="fas fa-eye"></i>
-                                </a>
-                                <a href="https://weatherapp-mdtanveer.netlify.app" target="_blank"
-                                    style="width:50px;height:50px;background:white;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#3a86ff;font-size:1.2rem;text-decoration:none;">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
+                            <h4 style="margin:0;font-size:1.2rem;font-weight:600;">Weather App</h4>
                         </div>
                     </div>
                     <div style="padding:25px;">
-                        <h3 style="font-size:1.3rem;margin-bottom:10px;">Weather Application</h3>
-                        <p style="color:var(--text-secondary);margin-bottom:15px;font-size:0.9rem;">Real-time weather
+                        <h3 style="font-size:1.3rem;margin-bottom:10px;color:var(--text-primary);">Weather Application
+                        </h3>
+                        <p style="color:var(--text-secondary);margin-bottom:20px;font-size:0.95rem;line-height:1.6;">
+                            Real-time weather
                             application with location detection and 5-day forecast.</p>
-                        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+
+                        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;">
                             <span
-                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">JavaScript</span>
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);font-weight:500;">JavaScript</span>
                             <span
-                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">API</span>
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);font-weight:500;">API</span>
                             <span
-                                style="padding:4px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);">CSS3</span>
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);font-weight:500;">CSS3</span>
+                        </div>
+
+                        <!-- Action Buttons - Clean Design -->
+                        <div style="display:flex;gap:12px;margin-top:15px;">
+                            <a href="https://github.com/mdtanveer0786/weather-app" target="_blank"
+                                style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 15px;background:var(--bg-tertiary);color:var(--text-primary);border-radius:8px;font-weight:500;text-decoration:none;font-size:0.9rem;transition:all 0.3s ease;border:none;user-select:none;-webkit-user-select:none;"
+                                onmouseover="this.style.background='var(--accent-color)';this.style.color='white';this.style.transform='translateY(-2px)';"
+                                onmouseout="this.style.background='var(--bg-tertiary)';this.style.color='var(--text-primary)';this.style.transform='translateY(0)';">
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="https://weatherapp-mdtanveer.netlify.app" target="_blank"
+                                style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 15px;background:linear-gradient(135deg,#3a86ff,#8338ec);color:white;border-radius:8px;font-weight:500;text-decoration:none;font-size:0.9rem;transition:all 0.3s ease;user-select:none;-webkit-user-select:none;"
+                                onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 5px 15px rgba(58,134,255,0.3)';"
+                                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Social Media Dashboard (Full Stack) -->
+                <div class="project-card" data-category="fullstack"
+                    style="border-radius:12px;overflow:hidden;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;background:var(--card-bg);user-select:none;-webkit-user-select:none;"
+                    onmouseover="this.style.transform='translateY(-10px)';"
+                    onmouseout="this.style.transform='translateY(0)';">
+                    <div
+                        style="height:200px;background:linear-gradient(135deg,#9d4edd,#560bad);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;">
+                        <div style="text-align:center;color:white;padding:20px;">
+                            <i class="fas fa-users" style="font-size:3rem;margin-bottom:15px;"></i>
+                            <h4 style="margin:0;font-size:1.2rem;font-weight:600;">Social Dashboard</h4>
+                        </div>
+                    </div>
+                    <div style="padding:25px;">
+                        <h3 style="font-size:1.3rem;margin-bottom:10px;color:var(--text-primary);">Social Media
+                            Dashboard</h3>
+                        <p style="color:var(--text-secondary);margin-bottom:20px;font-size:0.95rem;line-height:1.6;">
+                            Real-time social media dashboard with analytics, notifications, and user management.</p>
+
+                        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;">
+                            <span
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);font-weight:500;">React</span>
+                            <span
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);font-weight:500;">Node.js</span>
+                            <span
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);font-weight:500;">Socket.io</span>
+                        </div>
+
+                        <!-- Action Buttons - Clean Design -->
+                        <div style="display:flex;gap:12px;margin-top:15px;">
+                            <a href="https://github.com/mdtanveer0786/social-dashboard" target="_blank"
+                                style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 15px;background:var(--bg-tertiary);color:var(--text-primary);border-radius:8px;font-weight:500;text-decoration:none;font-size:0.9rem;transition:all 0.3s ease;border:none;user-select:none;-webkit-user-select:none;"
+                                onmouseover="this.style.background='var(--accent-color)';this.style.color='white';this.style.transform='translateY(-2px)';"
+                                onmouseout="this.style.background='var(--bg-tertiary)';this.style.color='var(--text-primary)';this.style.transform='translateY(0)';">
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="https://social-dashboard-demo.netlify.app" target="_blank"
+                                style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 15px;background:linear-gradient(135deg,#3a86ff,#8338ec);color:white;border-radius:8px;font-weight:500;text-decoration:none;font-size:0.9rem;transition:all 0.3s ease;user-select:none;-webkit-user-select:none;"
+                                onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 5px 15px rgba(58,134,255,0.3)';"
+                                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Blog CMS (Backend) -->
+                <div class="project-card" data-category="backend"
+                    style="border-radius:12px;overflow:hidden;box-shadow:0 5px 15px var(--shadow-color);transition:all 0.3s ease;cursor:pointer;background:var(--card-bg);user-select:none;-webkit-user-select:none;"
+                    onmouseover="this.style.transform='translateY(-10px)';"
+                    onmouseout="this.style.transform='translateY(0)';">
+                    <div
+                        style="height:200px;background:linear-gradient(135deg,#f8961e,#f3722c);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;">
+                        <div style="text-align:center;color:white;padding:20px;">
+                            <i class="fas fa-blog" style="font-size:3rem;margin-bottom:15px;"></i>
+                            <h4 style="margin:0;font-size:1.2rem;font-weight:600;">Blog CMS</h4>
+                        </div>
+                    </div>
+                    <div style="padding:25px;">
+                        <h3 style="font-size:1.3rem;margin-bottom:10px;color:var(--text-primary);">Blog Content
+                            Management System</h3>
+                        <p style="color:var(--text-secondary);margin-bottom:20px;font-size:0.95rem;line-height:1.6;">
+                            Full-featured blog CMS with rich text editor, user roles, and comment system.</p>
+
+                        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;">
+                            <span
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);font-weight:500;">Node.js</span>
+                            <span
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);font-weight:500;">Express</span>
+                            <span
+                                style="padding:5px 12px;background:var(--bg-tertiary);border-radius:15px;font-size:0.8rem;color:var(--text-secondary);font-weight:500;">MongoDB</span>
+                        </div>
+
+                        <!-- Action Buttons - Clean Design -->
+                        <div style="display:flex;gap:12px;margin-top:15px;">
+                            <a href="https://github.com/mdtanveer0786/blog-cms" target="_blank"
+                                style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 15px;background:var(--bg-tertiary);color:var(--text-primary);border-radius:8px;font-weight:500;text-decoration:none;font-size:0.9rem;transition:all 0.3s ease;border:none;user-select:none;-webkit-user-select:none;"
+                                onmouseover="this.style.background='var(--accent-color)';this.style.color='white';this.style.transform='translateY(-2px)';"
+                                onmouseout="this.style.background='var(--bg-tertiary)';this.style.color='var(--text-primary)';this.style.transform='translateY(0)';">
+                                <i class="fab fa-github"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="https://blog-cms-api.herokuapp.com" target="_blank"
+                                style="flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 15px;background:linear-gradient(135deg,#3a86ff,#8338ec);color:white;border-radius:8px;font-weight:500;text-decoration:none;font-size:0.9rem;transition:all 0.3s ease;user-select:none;-webkit-user-select:none;"
+                                onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 5px 15px rgba(58,134,255,0.3)';"
+                                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Demo</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- View All Projects Button -->
             <div style="text-align:center;margin-top:50px;">
                 <a href="https://github.com/mdtanveer0786" target="_blank"
-                    style="display:inline-block;padding:12px 30px;background:transparent;color:var(--accent-color);border:2px solid var(--accent-color);border-radius:8px;font-weight:600;text-align:center;cursor:pointer;transition:all 0.3s ease;font-size:1rem; text-decoration:none;"
-                    onmouseover="this.style.background='var(--accent-color)';this.style.color='white';"
-                    onmouseout="this.style.background='transparent';this.style.color='var(--accent-color)';">View All
-                    Projects</a>
+                    style="display:inline-flex;align-items:center;gap:12px;padding:14px 32px;background:transparent;color:var(--accent-color);border:2px solid var(--accent-color);border-radius:8px;font-weight:600;text-align:center;cursor:pointer;transition:all 0.3s ease;font-size:1rem;text-decoration:none;user-select:none;-webkit-user-select:none;"
+                    onmouseover="this.style.background='var(--accent-color)';this.style.color='white';this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 20px rgba(58,134,255,0.3)';"
+                    onmouseout="this.style.background='transparent';this.style.color='var(--accent-color)';this.style.transform='translateY(0)';this.style.boxShadow='none';">
+                    <i class="fab fa-github"></i>
+                    View All Projects on GitHub
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
 
+    <!-- Remove the old CSS style tag and replace it with this simplified one -->
     <style>
+        /* Projects Section - Simplified CSS */
+        .project-card {
+            transition: all 0.3s ease !important;
+        }
+
         .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px var(--shadow-color);
+            transform: translateY(-10px) !important;
+            box-shadow: 0 15px 30px var(--shadow-color) !important;
         }
 
-        .project-overlay {
-            opacity: 0;
-        }
-
-        .filter-btn:not(.active) {
-            background: var(--bg-tertiary);
-            color: var(--text-secondary);
+        /* Filter button styles - Consolidated */
+        .filter-btn {
+            transition: all 0.3s ease !important;
         }
 
         .filter-btn.active {
-            background: linear-gradient(135deg, #3a86ff, #8338ec);
-            color: white;
+            background: linear-gradient(135deg, #3a86ff, #8338ec) !important;
+            color: white !important;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(58, 134, 255, 0.3) !important;
+        }
+
+        .filter-btn:not(.active) {
+            background: var(--bg-tertiary) !important;
+            color: var(--text-secondary) !important;
+        }
+
+        .filter-btn:hover:not(.active) {
+            background: var(--accent-color) !important;
+            color: white !important;
+            transform: translateY(-2px);
+        }
+
+        /* Button hover effects */
+        .project-card a {
+            transition: all 0.3s ease !important;
+        }
+
+        .project-card a:hover {
+            transform: translateY(-2px) !important;
+        }
+
+        /* Tech tags hover effect */
+        .project-card>div:last-child span:not(a span) {
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover>div:last-child span:not(a span) {
+            background: var(--accent-color) !important;
+            color: white !important;
+        }
+
+        /* Responsive design */
+        @media (max-width: 480px) {
+            .project-card div[style*="display:flex;gap:12px"] {
+                flex-direction: column;
+            }
+
+            .filter-btn {
+                padding: 8px 16px !important;
+                font-size: 0.9rem !important;
+            }
         }
     </style>
 
+    <!-- Replace the old JavaScript with this simplified version -->
+    <script>
+        // Projects Filtering Function - Simplified
+        function initProjectFilter() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.style.background = 'var(--bg-tertiary)';
+                        btn.style.color = 'var(--text-secondary)';
+                    });
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    this.style.background = 'linear-gradient(135deg, #3a86ff, #8338ec)';
+                    this.style.color = 'white';
+
+                    const filterValue = this.getAttribute('data-filter');
+
+                    // Filter projects with smooth animation
+                    projectCards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+
+                        if (filterValue === 'all' || category === filterValue) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+
+            // Initialize animations
+            animateProjectCards();
+        }
+
+        // Project card animation on scroll
+        function animateProjectCards() {
+            const projectCards = document.querySelectorAll('.project-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            projectCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                observer.observe(card);
+            });
+        }
+
+        // Theme update for project cards
+        function updateProjectCardTheme() {
+            const isDarkTheme = document.documentElement.getAttribute('data-theme') === 'dark';
+
+            // Update project card text colors
+            document.querySelectorAll('.project-card h3').forEach(title => {
+                title.style.color = isDarkTheme ? '#f8f9fa' : '#1a1a2e';
+            });
+
+            // Update code button text colors
+            document.querySelectorAll('.project-card a[style*="background:var(--bg-tertiary)"]').forEach(btn => {
+                btn.style.color = isDarkTheme ? '#f8f9fa' : '#1a1a2e';
+            });
+        }
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            initProjectFilter();
+
+            // Update theme colors when theme changes
+            const themeObserver = new MutationObserver(function (mutations) {
+                mutations.forEach(function (mutation) {
+                    if (mutation.attributeName === 'data-theme') {
+                        updateProjectCardTheme();
+                    }
+                });
+            });
+
+            themeObserver.observe(document.documentElement, {
+                attributes: true,
+                attributeFilter: ['data-theme']
+            });
+
+            // Initial theme setup
+            updateProjectCardTheme();
+        });
+    </script>
+    
     <!-- Contact Section -->
     <section id="contact" style="padding:100px 0;background:linear-gradient(135deg,#3a86ff,#8338ec);color:white;">
         <div style="max-width:1200px;margin:0 auto;padding:0 20px;">
@@ -1335,12 +1618,12 @@
                             onmouseout="this.style.color='#3a86ff';this.style.textShadow='none';">
                             Md Tanveer Alam
                         </a>
-                        <span style="color:#adb5bd;font-size:0.9rem;"></span>
+                        <!-- <span style="color:#adb5bd;font-size:0.9rem;"></span>
                         <a href="https://github.com/mdtanveer0786" target="_blank"
                             style="color:#adb5bd;text-decoration:none;transition:all 0.3s ease;font-size:0.9rem;"
                             onmouseover="this.style.color='#3a86ff';">
                             View GitHub
-                        </a>
+                        </a> -->
                     </div>
 
                     <div style="color:#adb5bd;font-size:0.9rem;">
